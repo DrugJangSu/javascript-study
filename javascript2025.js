@@ -86,3 +86,14 @@
 // console.log(myFirstJob);
 
 // * Practice Assignment *
+// Declare variables called country, continent, population and assign their values according to your own country (population in millions), and log their values in the console.
+
+// let country = "South Korea";
+// let continent = 'Asia';
+// let population 51.7; // Population in millions
+// console.log(country);
+// console.log(continent);
+// console.log(population);
+// //You can also use console.log to log multiple variables at once:
+// console.log(country, continent, population);
+
