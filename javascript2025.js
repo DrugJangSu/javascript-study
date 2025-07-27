@@ -97,3 +97,37 @@
 // //You can also use console.log to log multiple variables at once:
 // console.log(country, continent, population);
 
+// ** Data Types **
+
+// Number : Floating point numbers -> Used for decimals and integers
+// String : Sequence of characters -> Used for text
+// Boolean : Logical type that can be true or false -> Used for taking decisions
+// Undefined : Value taken by a variable that is not yet defined(empty value)
+// Null : Also a type of empty value
+// Symbol (ES2015) : Value that is unique and cannot be changed
+// BigInt (ES2020) : Larger integers than the Number type can hold
+
+// Javascript has dynamic typing : We do not have to manually define the data type of a variable, it is automatically determined by the value assigned to it. It's worth knowing that the Value has the type, not the variable itself.
+
+// let javascriptIsFun = true;
+// console.log(javascriptIsFun);
+// // This is a descriptive variable name holding a Boolean value.
+
+// // console.log(typeof true); // This will log 'boolean' to the console, indicating the type of the value.
+// // console.log(typeof true);
+// console.log(typeof javascriptIsFun);
+// // console.log(typeof 23);
+// // console.log(typeof 'Jonas');
+
+// javascriptIsFun = 'YES!'; // Reassigning the variable to a string value
+// console.log(typeof javascriptIsFun);
+// // This will log 'string' to the console, indicating the type of the value after reassignment.
+
+// let year; // Declaring a variable without a value
+// console.log(year); // This will log 'undefined' to the consol,e indicating that the variable has not been assigned a value.
+// console.log(typeof year); // This will log 'undefined' to the console, indicating the type of the value.
+
+// year = 1991; // Assigning a value to a variable
+// console.log(typeof year); // This will log the value 1991 to the console.
+// console.log(typeof null); // This will log 'object' to the console, which is a known bug in JavaScript. Null is actually a primitive value that represents the absence of any object value.
+
