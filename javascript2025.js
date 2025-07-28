@@ -65,7 +65,7 @@
 // console.log(firstName);
 // console.log(firstName);
 
-// // let 3years = 3; // This is not a valid variable name, it cannot start with a number 
+// // let 3years = 3; // This is not a valid variable name, it cannot start with a number
 
 // // let jonas&matilda = 'JM'; // This is also not a vaild variable name, it cannot contain special characters like &
 
@@ -160,14 +160,13 @@
 // const ageSarah = now - 2018;
 // console.log(ageJonas, ageSarah);
 
-// console.log(ageJonas * 2, ageJonas / 10, 2 ** 3); 
+// console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
 // // 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2 =8 <- 2의 3승
 
 // const firstName = 'Jonas';
 // const lastName = 'Schmedtmann';
-// console.log(firstName + ' ' + lastName); 
+// console.log(firstName + ' ' + lastName);
 // // Concatenation of strings
-
 
 // // Asssignment operators
 // let x = 10 + 5; // which is 15
@@ -185,3 +184,17 @@
 
 // console.log(now - 1991 > now - 2018)
 
+// // ** Operator precedence **
+// const now = 2037;
+// const ageJonas = now - 1991;
+// const ageSarah = now - 2018;
+
+// console.log(now - 1991 > now - 2018);
+
+// let x, y;
+// x = y = 25 - 10 - 5; // x = y = 10, x = 10
+// console.log(x, y);
+
+// const averageAge = (ageJonas + ageSarah) / 2;
+// // Average age calculation
+// console.log(ageJonas, ageSarah, averageAge);
