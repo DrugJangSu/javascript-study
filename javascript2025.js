@@ -131,3 +131,25 @@
 // console.log(typeof year); // This will log the value 1991 to the console.
 // console.log(typeof null); // This will log 'object' to the console, which is a known bug in JavaScript. Null is actually a primitive value that represents the absence of any object value.
 
+// ** let, const and var **
+// let, const, and var are used to declare variables in JavaScript. However, they have different scopes and behaviors.
+
+// let age = 30;
+// age = 31; // Reassigning the value of the variable
+
+// const birthYear = 1991; // Declaring a constant variable(which cannot be reassigned)
+// // birthYear = 1990; // This will throw an error because constants cannot be reassigned
+
+// // const job; // This will throw an error because constants must be initialized with a value
+// // The instructor recommends using const for variables that will not be reassigned as the default option, and let for variables that will be reassigned later.
+// // let is used for variables that can change, while const is used for variables that should not change.
+
+// var job = 'programmer';
+// job = 'teacher'
+// // var is an older way to declare variables, but it has function scope and can lead to issues with hoisting. It is generally recommended to use let and const instead of var in modern JavaScript.
+// // The instructor says never use var, lol
+
+// lastName = 'Schmedtmann';
+// console.log(lastName); // This will log 'Schmedtmann' to the console, even though lastName was not declared with let, const, or var. This is because JavaScript allows undeclared variables, but it is not a good practice and can lead to bugs in your code. Always declare your variables with let, const, or var to avoid this issue.
+
+
