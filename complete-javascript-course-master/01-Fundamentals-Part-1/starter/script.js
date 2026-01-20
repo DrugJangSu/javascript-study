@@ -175,3 +175,4 @@
 // console.log(BMIMark, BMIJohn, markHigherBMI);
 
 // ** Strings and Template Literals **
+// -----------review starting from the top ---------------------------------------------------------
