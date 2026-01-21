@@ -176,3 +176,13 @@
 
 // ** Strings and Template Literals **
 // -----------review starting from the top ---------------------------------------------------------
+let js = "amazing";
+// if (js === "amazing") alert("JavaScript is FUN!");
+console.log(40 + 8 + 23 - 10);
+
+// Once it's linked to the js file and the html, everything that's coded in the js will affect the html.
+
+console.log("Jonas");
+console.log(23);
+let firstName = "Jonas";
+console.log(firstName);
