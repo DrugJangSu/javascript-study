@@ -390,3 +390,28 @@ console.log(5 + 6 + "4" + 9 - 4 - 2); // -> 1143 <- I only got this wrong
 */
 
 //Truthly and Falsy Values
+// 5 falsy values : 0, '', undefined, null, NaN
+/*
+console.log(Boolean(0)); //-> results in false
+console.log(Boolean(undefined)); //-> false
+console.log(Boolean("Jonas")); //-> true
+console.log(Boolean({})); //-> true
+console.log(Boolean("")); //-> false
+
+// const money = 0;
+const money = 100;
+if (money) {
+  console.log("Don't spend it all :)");
+} else {
+  console.log("You should get a job!");
+}
+// the reason this works, is that despite 0 not being a boolean, it will try to convert into a boolean which makes the money statement false.
+
+// let height;
+let height = 0;
+if (height) {
+  console.log(`YAY! Height is defined`);
+} else {
+  console.log(`Height is UNDEFINED`);
+}
+*/
