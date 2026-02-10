@@ -249,6 +249,42 @@
 // const markHigherBMI = BMIMark > BMIJohn;
 // console.log(BMIMark, BMIJohn, markHigherBMI);
 
-// ** Strings and Template Literals **
+//// Strings and Template Literals
+/*
+const firstName = "jonas";
+const job = "teacher";
+const birthYear = 1991;
+const year = 2037;
 
-// -----------review starting from the top ---------------------------------------------------------
+const jonas =
+  "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+console.log(jonas);
+
+// Using the template literals(` key is right above the tab key)
+const jonasNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+console.log(jonasNew);
+
+//You can use backticks for all strings.
+console.log(`Just a regular normal string lol`);
+
+console.log(
+  "string with \n\
+multiple \n\
+lines",
+);
+
+console.log(`String with
+multiple
+lines`);
+
+
+// // Assignment[Strings and Template Literals]
+let country = "South Korea";
+let continent = "Asia";
+let population = "50";
+let isIsland = false;
+let language = "Korean";
+
+const description = `${country} is in ${continent}, and its ${population} million people speak ${language}.`;
+console.log(description);
+*/
