@@ -327,4 +327,66 @@ if (BMIMark > BMIJohn) {
 } else {
   console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`);
 }
+
+
+/// Assignment[Taking Decisions: if/else Statements]
+let country = "South Korea";
+let continent = "Asia";
+let population = "50";
+let isIsland = false;
+let language = "Korean";
+
+if (population > 33) {
+  console.log(
+    `${country}'s population is ${population - 33} million above average`,
+  );
+} else {
+  console.log(
+    `${country}'s population is ${33 - population} million below average`,
+  );
+}
 */
+
+//// Type Coversion and Coercion
+/*
+/// Type Conversion
+const inputYear = `1991`;
+console.log(inputYear + 18);
+// This will be printed as 199118, instead of adding up since it's considered a string.
+
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number("Jonas"));
+// This will print a Nan, which means not a number.(invaild)
+console.log(typeof NaN);
+// Nan is considered a number in programming
+
+console.log(String(23), 23);
+// purple color in the console means it's a number.
+
+/// Type Coercion
+console.log("I am " + 23 + " years old");
+console.log("I am " + "23" + " years old");
+console.log("23" - "10" - 3);
+console.log("23" * "2");
+//it means that javascript automatically does conversions so that the code could run.
+
+let n = "1" + 1;
+n = n - 1;
+console.log(n);
+// This will print out 10. (1+1 will automatically covert it as a string, which is 11. and the minus operator on the following code will automatically convert it to an integer which results to 10.)
+
+2 + 3 + 4 + "5"; // this will be 95
+"10" - "4" - "3" - 2 + "5"; // this will be 15
+
+/// Assignment[Type Conversion and Coercion]
+
+console.log("9" - "5"); // -> 4
+console.log("19" - "13" + "17"); // -> 617
+console.log("19" - "13" + 17); // -> 23
+console.log("123" < 57); // -> False
+console.log(5 + 6 + "4" + 9 - 4 - 2); // -> 1143 <- I only got this wrong
+*/
+
+//Truthly and Falsy Values
