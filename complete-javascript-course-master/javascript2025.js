@@ -463,6 +463,64 @@ if (numNeighbour === 1) {
 } else {
   console.log(`No borders`);
 }
-*/
 
 //// Boolean Logic
+/// Basic Boolean Logic : The AND, OR & NOT Operators
+
+// A AND B (True when ALL are True)
+// A OR B (True when ONE or more is True)
+// NOT A, NOT B (Inverts true/false value)
+
+
+//// Logical Operators
+const hasDriversLicense = true; // variable A
+const hasGoodVision = true; // variable B
+
+console.log(hasDriversLicense && hasGoodVision); //&& means AND
+console.log(hasDriversLicense || hasGoodVision); // || means OR
+console.log(!hasDriversLicense); // ! means not
+
+// if (hasDriversLicense && hasGoodVision) {
+//   console.log(`Sarah is able to drive!`);
+// } else {
+//   console.log(`Someone else should drive...`);
+// }
+
+const isTired = false; // variable C
+console.log(hasDriversLicense || hasGoodVision || isTired);
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+  console.log(`Sarah is able to drive!`);
+} else {
+  console.log(`Someone else should drive...`);
+}
+
+/// Assignment[Logical Operators]
+// {<My solution>
+const country = "South Korea";
+const continent = "Asia";
+const population = 40;
+const isIsland = false;
+const language = "English";
+
+if (language === `English` && population < 50 && !isIsland) {
+  console.log(`You should live in ${country} :)`);
+} else {
+  console.log(`${country} does not meet your criteria :()`);
+}
+
+
+/// Coding Challenge #3
+// {<My solution>
+const scoreDolphins = (96 + 108 + 89) / 3;
+const scoreKoalas = (88 + 91 + 110) / 3;
+
+if (scoreDolphins > scoreKoalas) {
+  console.log("Dolphins win the trophy");
+} else if (scoreKoalas > scoreDolphins) {
+  console.log("Koalas win the trophy");
+} else {
+  ("Both win the trophy");
+}
+*/
