@@ -550,3 +550,52 @@ if (height) {
 */
 
 //// Equality Operators: == vs ===
+/*
+const age = 18;
+if (age === 18) console.log("You just became an adult :D(strict)");
+
+// a single equal is an assignment operator, and the triple equal is a comparison operator.
+// the triple equal is called the strict equality operator.(because it doesn't do type cocercion)
+"18" === 18; // <- this would be false.
+// the double equal is a loose equality operator. (because it proceeds the time cocercion)
+"18" == 18; // <- this would be true.
+
+if (age == 18) console.log("You just became an adult :D(loose)");
+
+// as a general rule, always use strict equality(triple equal signs) in order to find bugs and debug codes to avoid errors.
+
+const favourite = Number(prompt("What is your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) {
+  console.log(`Cool! 23 is an amazing number`);
+} else if (favourite === 7) {
+  console.log(`7 is also a cool number`);
+} else if (favourite === 9) {
+  console.log("9 is also a cool number");
+} else {
+  console.log("Number is not 23 or 7 or 9");
+}
+
+// this is a different operator(make sure to use the strict version which is !== instead of !=)
+if (favourite !== 23) console.log("why not 23?");
+
+/// Assignment[Equality Operators : == vs ===]
+// <My solution>
+const numNeighbour = Number(
+  prompt(`How many neighbour countries does your country have?`),
+);
+console.log(numNeighbour);
+console.log(typeof numNeighbour);
+
+if (numNeighbour === 1) {
+  console.log(`Only 1 border!`);
+} else if (numNeighbour > 1) {
+  console.log(`More than 1 border`);
+} else {
+  console.log(`No borders`);
+}
+*/
+
+//// Boolean Logic
