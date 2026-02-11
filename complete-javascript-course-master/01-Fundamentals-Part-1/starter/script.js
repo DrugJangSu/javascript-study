@@ -656,4 +656,37 @@ if (scoreDolphins > scoreKoalas) {
 } else {
   ("Both win the trophy");
 }
+
+// <jona's solution>
+// Bonus 1: Include a requirement for a minimum score of 100. With this rule, a team only wins if it has a higher score than the enemy team, and ther same time a score of at least 100 points.
+const scoreDolphins = (97 + 112 + 101) / 3;
+const scoreKoalas = (109 + 95 + 123) / 3;
+console.log(scoreDolphins, scoreKoalas);
+
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+  console.log("Dolphins win the trophy");
+} else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+  console.log("Koalas win the trophy");
+} else {
+  ("Both win the trophy");
+}
+
+// Bonus 2: Minimum score also applies to a draw. So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy.
+const scoreDolphins = (97 + 112 + 81) / 3;
+const scoreKoalas = (109 + 95 + 86) / 3;
+console.log(scoreDolphins, scoreKoalas);
+
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+  console.log("Dolphins win the trophy");
+} else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+  console.log("Koalas win the trophy");
+} else if (
+  scoreKoalas === scoreDolphins &&
+  scoreDolphins >= 100 &&
+  scoreKoalas >= 100
+) {
+  console.log("Both win the trophy");
+} else {
+  console.log(`No one wins the trophy.`);
+}
 */
