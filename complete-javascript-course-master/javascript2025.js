@@ -627,4 +627,68 @@ switch (language) {
   default:
     console.log("Great language too :D");
 }
+
+//// Statements and Expressions
+3 + 4;
+1991;
+true && false && !false;
+
+if (23 > 10) {
+  const str = "23 is bigger";
+}
+
+const me = "Jonas";
+console.log(`I'm ${2037 - 1991} years old ${me}.`);
 */
+
+//// The Conditional (Ternary) Operator
+/*
+const age = 15;
+// age >= 18
+//   ? console.log("i like to drink wine 🍷")
+//   : console.log("I like to drink water 💧 ");
+
+const drink = age >= 18 ? "wine 🍷" : "water 💧";
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+  drink2 = "wine 🍷";
+} else {
+  drink2 = "water 💧";
+}
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? "wine 🍷" : "water 💧"}`);
+
+
+/// Assignment[The Conditional(Ternary) Operator]
+// My Solution
+const country = "South Korea";
+const population = 40;
+
+console.log(
+  `South Korea's population is ${population > 33 ? "above average" : "below average"}`,
+);
+
+/// Coding Exercise - Challenge #4
+// My solution
+const bill = 275;
+
+let tip;
+tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2
+
+console.log(tip)
+console.log(bill + tip)
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill+tip}`)
+
+// Instructor's solution
+const bill = 275;
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+console.log(
+  `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`,
+);
+*/
+
+///// Section 3 : JavaScript Fundamentals - Part 2
+//// Activating Strict Mode
