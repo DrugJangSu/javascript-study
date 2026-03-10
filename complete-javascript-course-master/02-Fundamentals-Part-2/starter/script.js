@@ -119,5 +119,58 @@ const percUSA1 = percentageOfWorld1(332);
 
 console.log(percPortugal1, percChina1, percUSA1);
 */
+
 //// Arrow Functions
+/*
+"use strict";
+// Arrow function example
+const calcAge3 = (birthYear) => 2037 - birthYear;
+console.log(calcAge3(1991));
+
+// const yearsUntilRetirement = (birthYear) => {
+//   const age = 2037 - birthYear;
+//   const retirement = 65 - age;
+//   return retirement;
+// };
+
+// console.log(yearsUntilRetirement(1991));
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  return `${firstName} retires in ${retirement} years`;
+};
+
+console.log(yearsUntilRetirement(1997, "Hyun"));
+console.log(yearsUntilRetirement(1980, "Bob"));
+console.log(yearsUntilRetirement(1980, "Jonas"));
+
+/// Assignment[Arrow Functions]
+// Last assessment
+const percentageOfWorld2 = function (population) {
+  return (population / 7900) * 100;
+};
+const china2 = percentageOfWorld2(1441);
+const southKorea2 = percentageOfWorld2(51);
+const japan2 = percentageOfWorld2(126);
+console.log(china2, southKorea2, japan2);
+
+//my solution
+const percentageOfWorld3 = (population) => (population / 7900) * 100;
+const china3 = percentageOfWorld3(1441);
+const southKorea3 = percentageOfWorld3(51);
+const japan3 = percentageOfWorld3(126);
+console.log(china3, southKorea3, japan3);
+
+// jonas solution
+show example solution
+ {...}
+const percentageOfWorld3 = population => (population / 7900) * 100;
+const percPortugal3 = percentageOfWorld3(10);
+const percChina3 = percentageOfWorld3(1441);
+const percUSA3 = percentageOfWorld3(332);
+
+console.log(percPortugal3, percChina3, percUSA3);
+*/
+//// Functions Calling Other Functions
 "use strict";
