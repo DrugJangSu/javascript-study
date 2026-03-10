@@ -864,5 +864,56 @@ const percUSA3 = percentageOfWorld3(332);
 
 console.log(percPortugal3, percChina3, percUSA3);
 */
+*/
 //// Functions Calling Other Functions
+/*
+"use strict";
+
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+
+  const juice = `Juice with ${applePieces} apple pieces and ${orangePieces} orange pieces.`;
+  return juice;
+}
+
+console.log(fruitProcessor(2, 3));
+
+/// Assignment[Functions Calling Other Functions]
+// previous percentageOfWorld1 function
+function percentageOfWorld1(population) {
+  return (population / 7900) * 100;
+}
+const china1 = percentageOfWorld1(1441);
+const southKorea1 = percentageOfWorld1(51);
+const japan1 = percentageOfWorld1(126);
+console.log(china1, southKorea1, japan1);
+
+// my solution
+function describePopulation(country, population) {
+  const percentage = percentageOfWorld1(population);
+  const describe = `${country} has ${population} million people, which is about ${percentage}`;
+  return describe;
+}
+const chinaPopulation = describePopulation("China", 1441);
+const southKoreaPopulation = describePopulation("South Korea", 51);
+const japanPopulation = describePopulation("Japan", 126);
+console.log(chinaPopulation, southKoreaPopulation, japanPopulation);
+
+// Jona's Solution
+const describePopulation = function (country, population) {
+  const percentage = percentageOfWorld1(population);
+  const description = `${country} has ${population} million people, which is about ${percentage}% of the world.`;
+  console.log(description);
+};
+
+describePopulation("Portugal", 10);
+describePopulation("China", 1441);
+describePopulation("USA", 332);
+*/
+//// Reviewing Functions
 "use strict";
