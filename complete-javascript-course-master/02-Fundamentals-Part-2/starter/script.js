@@ -66,4 +66,58 @@ const descFinland = describeCountry("Finland", 6, "Helsinki");
 console.log(descPortugal, descGermany, descFinland);
 */
 //// Function Declarations vs. Expressions
+/*
+"use strict";
+// Function declaration example
+function calcAge1(birthYear) {
+  return 2037 - birthYear;
+}
+const age1 = calcAge1(1991);
+
+// Function expression example
+const calcAge2 = function (birthYear) {
+  return 2037 - birthYear;
+};
+const age2 = calcAge2(1991);
+
+console.log(age1, age2);
+
+// Function declaration can be called before it is defined in the code, while function expression cannot be called before it is defined.
+
+/// Assignment[Function Declarations vs. Expressions]
+// My Solution
+// Function Declaration
+function percentageOfWorld1(population) {
+  return (population / 7900) * 100;
+}
+const china1 = percentageOfWorld1(1441);
+const southKorea1 = percentageOfWorld1(51);
+const japan1 = percentageOfWorld1(126);
+console.log(china1, southKorea1, japan1);
+
+// Function Expression
+const percentageOfWorld2 = function (population) {
+  return (population / 7900) * 100;
+};
+const china2 = percentageOfWorld2(1441);
+const southKorea2 = percentageOfWorld2(51);
+const japan2 = percentageOfWorld2(126);
+console.log(china2, southKorea2, japan2);
+
+//Jonas Solution
+function percentageOfWorld1(population) {
+   return (population / 7900) * 100;
+}
+
+const percentageOfWorld2 = function (population) {
+  return (population / 7900) * 100;
+};
+
+const percPortugal1 = percentageOfWorld1(10);
+const percChina1 = percentageOfWorld1(1441);
+const percUSA1 = percentageOfWorld1(332);
+
+console.log(percPortugal1, percChina1, percUSA1);
+*/
+//// Arrow Functions
 "use strict";
