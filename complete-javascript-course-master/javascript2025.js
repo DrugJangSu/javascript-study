@@ -951,7 +951,6 @@ const calcAverage = (score1, score2, score3) => {
 }
 
 
-
 const checkWinner = (scoreDolphins,scoreKoalas) => {
     if (scoreDolphins > scoreKoalas) {
         console.log(`Dolphins win (${scoreDolphins} vs. ${scoreKoalas})`)
