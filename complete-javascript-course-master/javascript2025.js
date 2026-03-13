@@ -916,4 +916,57 @@ describePopulation("China", 1441);
 describePopulation("USA", 332);
 */
 //// Reviewing Functions
+/*
 "use strict";
+
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+
+  if (retirement > 0) {
+    console.log(`${firstName} retires in ${retirement} years`);
+    return retirement;
+  } else {
+    console.log(`${firstName} has already retired`);
+    return -1;
+  }
+};
+
+console.log(yearsUntilRetirement(1991, "Jonas"));
+console.log(yearsUntilRetirement(1997, "Hyun"));
+console.log(yearsUntilRetirement(1950, "Mike"));
+
+// The return function should be always at the very last line. The function will stop executing after the return statement.
+
+
+//// Coding Challenge #1
+/// My solution
+const calcAverage = (score1, score2, score3) => {
+    const average = (score1 + score2 + score3) / 3
+    return average;
+}
+
+
+
+const checkWinner = (scoreDolphins,scoreKoalas) => {
+    if (scoreDolphins > scoreKoalas) {
+        console.log(`Dolphins win (${scoreDolphins} vs. ${scoreKoalas})`)
+    } else if (scoreKoalas > scoreDolphins) {
+        console.log(`Koalas win (${scoreKoalas} vs ${scoreDolphins})`)
+    } else {
+        console.log("No team wins...")
+    }
+}
+const scoreDolphins = calcAverage(44, 23, 71)
+const scoreKoalas = calcAverage(85, 54, 41)
+checkWinner(scoreDolphins, scoreKoalas)
+
+const scoreDolphins = calcAverage(85, 54, 41)
+const scoreKoalas = calcAverage(23, 34, 27)
+checkWinner(scoreDolphins, scoreKoalas)
+
+*/
