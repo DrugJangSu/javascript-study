@@ -388,9 +388,91 @@ const percentages = [
   percentageOfWorld1(populations[3]),
 ];
 console.log(percentages);
-*/
+
 //// Basic Array Operations (Methods)
 const friends = ["Michael", "Steven", "Peter"];
 
-friends.push("Jay");
+// Add elements
+const newLength = friends.push("Jay"); // Last
 console.log(friends);
+console.log(newLength);
+
+friends.unshift("John"); // First
+console.log(friends);
+
+// Remove elements
+friends.pop(); // Last
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift(); // First
+console.log(friends);
+
+console.log(friends.indexOf("Steven"));
+console.log(friends.indexOf("Bob"));
+
+// Boolean
+friends.push(23);
+console.log(friends.includes("Steven"));
+console.log(friends.includes("Bob"));
+console.log(friends.includes("23")); // this will return false because "23" is a string and 23 is a number.
+console.log(friends.includes(23)); // this will return true because 23 is a number and it is included in the array.
+
+if (friends.includes("Steven")) {
+  console.log("You have a friend called Steven");
+}
+
+/// Assignment[Basic Array Operations (Methods)]
+// My solution
+const neighbours = ["China", "Japan", "North Korea"];
+const add1 = neighbours.push("Utopia");
+console.log(neighbours);
+console.log(add1);
+const remove = neighbours.pop();
+console.log(neighbours);
+console.log(remove);
+
+if (neighbours.includes("Germany")) {
+  console.log(neighbours);
+} else {
+  console.log("Probably not a central european country :D");
+}
+const index = neighbours.indexOf("Japan");
+console.log(index);
+neighbours[1] = "Nihon";
+console.log(neighbours);
+
+
+/// Coding Exercise 6 : Challenge #2
+
+const bills = [125, 555, 44]
+
+const calcTip = function (bill) {
+ return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2 
+};
+
+const tip1 = calcTip(bills[0])
+const tip2 = calcTip(bills[1])
+const tip3 = calcTip(bills[2])
+const tips = [tip1, tip2, tip3]
+console.log(tips)
+
+const totals = [bills[0] + tip1, bills[1] + tip2, bills[2] + tip3]
+console.log(totals)
+
+// Jonas Solution
+const bills = [125, 555, 44];
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(tips);
+
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+console.log(totals);
+*/
+
+//// Basic Array Operations (Methods)
