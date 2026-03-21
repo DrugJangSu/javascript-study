@@ -1208,3 +1208,86 @@ const myCountry = {
 */
 
 //// Dot vs. Bracket Notation
+/*
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtamnn",
+  age: 2037 - 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+};
+console.log(jonas);
+// The order of properties in an object doesn't matter.
+
+// Dot notation
+console.log(jonas.lastName);
+// Bracket notation
+console.log(jonas["lastName"]);
+
+const nameKey = "Name";
+console.log(jonas["first" + nameKey]);
+console.log(jonas["last" + nameKey]);
+
+// console.log(jonas."last" + nameKey); <- this will cause an error because we cannot use dot notation with a variable.
+
+const interestedIn = prompt(
+  "What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends.",
+);
+// console.log(interestedIn.jonas); // this will return undefined because we are trying to access a property that doesn't exist in the object.
+
+console.log(jonas[interestedIn]); // this will return the value of the property that the user inputted.
+
+if (jonas[interestedIn]) {
+  console.log(jonas[interestedIn]);
+} else {
+  console.log(
+    "Wrong request! Choose between firstName, lastName, age, job, and friends.",
+  );
+}
+
+jonas.location = "Portugal";
+jonas["twitter"] = "@jonasschmedtman";
+console.log(jonas);
+
+/// Challenge
+/// print "Jonas has 3 friends, and his best friend is called Michael"
+// My solution
+console.log(
+  `${jonas.firstName}` +
+    " has " +
+    `${jonas.friends.length}` +
+    " friends, and his best friend is called " +
+    `${jonas.friends[0]}`,
+);
+
+console.log(
+  `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
+);
+
+/// Assignment[Dot vs Bracket Notation]
+// My solution
+const myCountry = {
+  country: "South Korea",
+  capital: "Seoul",
+  language: "Korean",
+  population: 51,
+  neighbours: ["China", "Japan", "North Korea", "Taiwan"],
+};
+
+console.log(
+  `${myCountry.country} has ${myCountry.population} million ${myCountry.language} speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`,
+);
+
+// Jonas Solution
+console.log(
+  `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`
+);
+
+myCountry.population += 2;
+console.log(myCountry.population);
+
+myCountry['population'] -= 2;
+console.log(myCountry.population);
+*/
+
+//// Object Methods
