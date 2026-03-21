@@ -445,7 +445,7 @@ console.log(neighbours);
 
 
 /// Coding Exercise 6 : Challenge #2
-
+// my solution
 const bills = [125, 555, 44]
 
 const calcTip = function (bill) {
