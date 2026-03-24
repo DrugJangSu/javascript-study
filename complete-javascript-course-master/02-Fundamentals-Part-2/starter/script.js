@@ -600,3 +600,19 @@ console.log(myCountry.population);
 */
 
 //// Object Methods
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  birthYear: 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+  hasDriversLicense: true,
+
+  calcAge: function (birthYear) {
+    return 2037 - birthYear;
+  },
+};
+
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
