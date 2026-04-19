@@ -1326,4 +1326,47 @@ console.log(jonas.calcAge(1991));
 // Jonas Solution
 
 console.log(jonas.getSummary());
+
+
+/// Assignment[Object Methods]
+const myCountry = {
+  country: "South Korea",
+  capital: "Seoul",
+  language: "Korean",
+  population: 51,
+  neighbours: ["China", "Japan", "North Korea", "Taiwan"],
+
+  describe: function () {
+    console.log(
+      `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`,
+    );
+  },
+  checkIsland: function () {
+    this.isIsland = this.neighbours.length === 0 ? true : false;
+  },
+};
+
+myCountry.describe();
+myCountry.checkIsland();
+console.log(myCountry);
+
 */
+// Reviewing Objects and Methods
+const jonasArray = [
+  "Jonas",
+  "Schmedtmann",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
+];
+// 데이터를 꺼낼 때 숫자 인덱스를 써야 함. [2]가 나이인지 알려면 코드를 처음부터 세어봐야 함.(순서 중요)
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  age: 2037 - 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+};
+
+// 데이터를 꺼낼 때 이름(key) 을 써요. jonas.age만 봐도 나이라는 게 바로 명확함. (순서 상관없음)

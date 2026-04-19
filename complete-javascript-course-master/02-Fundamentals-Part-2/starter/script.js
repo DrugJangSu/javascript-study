@@ -636,3 +636,27 @@ console.log(jonas.calcAge(1991));
 
 console.log(jonas.getSummary());
 */
+
+/// Assignment[Object Methods]
+const myCountry = {
+  country: "South Korea",
+  capital: "Seoul",
+  language: "Korean",
+  population: 51,
+  neighbours: ["China", "Japan", "North Korea", "Taiwan"],
+
+  describe: function () {
+    console.log(
+      `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`,
+    );
+  },
+  checkIsland: function () {
+    this.isIsland = this.neighbours.length === 0 ? true : false;
+  },
+};
+
+myCountry.describe();
+myCountry.checkIsland();
+console.log(myCountry);
+
+// Coding Challenge #3
