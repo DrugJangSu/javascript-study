@@ -1352,6 +1352,7 @@ console.log(myCountry);
 
 */
 // Reviewing Objects and Methods
+/*
 const jonasArray = [
   "Jonas",
   "Schmedtmann",
@@ -1370,3 +1371,46 @@ const jonas = {
 };
 
 // 데이터를 꺼낼 때 이름(key) 을 써요. jonas.age만 봐도 나이라는 게 바로 명확함. (순서 상관없음)
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  age: 2037 - 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+};
+console.log(jonas);
+
+console.log(jonas.lastName);
+// console.log(jonas.firstName);
+console.log(jonas["lastName"]);
+
+// These are two ways to access the properties of an object. Dot notation and bracket notation. Dot notation is more common, but bracket notation is useful when we want to compute the property name.
+
+const nameKey = "Name";
+console.log(jonas[`first` + nameKey]);
+console.log(jonas[`first` + nameKey]);
+// This only works in the bracket notation and not in the dot notation.
+/*
+const interestedIn = prompt(
+  `What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends.`,
+);
+console.log(interestedIn);
+console.log(jonas[interestedIn]);
+
+if (jonas[interestedIn]) {
+  console.log(jonas[interestedIn]);
+} else {
+  console.log(
+    `Wrong request! Choose between firstName, lastName, age, job, and friends.`,
+  );
+}
+
+jonas.location = `Portugal`;
+jonas["twitter"] = "@jonasschmedtman";
+console.log(jonas);
+
+// `Jonas has 3 friends, and his best friend is called Michael`
+console.log(
+  `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}.`,
+);
+*/
