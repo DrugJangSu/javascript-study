@@ -638,6 +638,7 @@ console.log(jonas.getSummary());
 */
 
 /// Assignment[Object Methods]
+/*
 const myCountry = {
   country: "South Korea",
   capital: "Seoul",
@@ -658,5 +659,8 @@ const myCountry = {
 myCountry.describe();
 myCountry.checkIsland();
 console.log(myCountry);
-
+*/
 // Coding Challenge #3
+// Come back when I'm ready ------------------------------------
+
+// Iteration : The for Loop
