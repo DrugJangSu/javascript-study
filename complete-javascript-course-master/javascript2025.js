@@ -1414,3 +1414,38 @@ console.log(
   `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}.`,
 );
 */
+
+// Coding Challenge #3
+// Come back when I'm ready ------------------------------------
+
+//// Iteration : The for Loop
+// console.log(`Lifting weights repetition 1 🏋️‍♀️`);
+// console.log(`Lifting weights repetition 2 🏋️‍♀️`);
+// console.log(`Lifting weights repetition 3 🏋️‍♀️`);
+// console.log(`Lifting weights repetition 4 🏋️‍♀️`);
+// console.log(`Lifting weights repetition 5 🏋️‍♀️`);
+// console.log(`Lifting weights repetition 6 🏋️‍♀️`);
+// console.log(`Lifting weights repetition 7 🏋️‍♀️`);
+// console.log(`Lifting weights repetition 8 🏋️‍♀️`);
+// console.log(`Lifting weights repetition 9 🏋️‍♀️`);
+// console.log(`Lifting weights repetition 10 🏋️‍♀️`);
+
+// for loop keeps running while condition is TRUE
+/*
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+}
+// rep++ is the same as rep = rep + 1
+
+/// Assignment[Iteration: The for Loop]
+// My solution
+for (let vote = 1; vote <= 50; vote++) {
+  console.log(`Voter number ${vote} is currently voting`);
+}
+// Jonas Solution
+for (let voter = 1; voter <= 50; voter++) {
+  console.log(`Voter number ${voter} is currently voting`);
+}
+*/
+
+//// Looping Arrays, Breaking and Continuing
