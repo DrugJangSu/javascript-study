@@ -694,3 +694,26 @@ for (let voter = 1; voter <= 50; voter++) {
 */
 
 //// Looping Arrays, Breaking and Continuing
+const jonas = [
+  "Jonas",
+  "Schmedtmann",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
+  true,
+];
+
+// console.log(jonas[0]);
+// console.log(jonas[1]);
+// console.log(jonas[2]);
+// console.log(jonas[3]);
+// console.log(jonas[4]);
+// jonas[5] does not exist, so it will return undefined.
+
+// for (let i = 0; ; i++) {
+//   console.log(jonas[0]);
+// }
+
+for (let i = 0; i < jonas.length; i++) {
+  console.log(jonas[i], typeof jonas[i]);
+}
