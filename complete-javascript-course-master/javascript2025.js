@@ -1448,4 +1448,18 @@ for (let voter = 1; voter <= 50; voter++) {
 }
 */
 
+// function cutFruitPieces(fruit) {
+//   return fruit * 4;
+// }
+
+// function fruitProcessor(apple, oranges) {
+//   const applePieces = cutFruitPieces(apples);
+//   const orangePieces = cutFruitPieces(oranges);
+
+//   const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+//   return juice;
+// }
+
+// console.log(fruitProcessor(2, 3));
+
 //// Looping Arrays, Breaking and Continuing
