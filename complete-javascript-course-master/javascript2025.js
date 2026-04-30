@@ -1462,4 +1462,15 @@ for (let voter = 1; voter <= 50; voter++) {
 
 // console.log(fruitProcessor(2, 3));
 
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  // return retirement;
+  return `${firstName} retires in ${retirement} years`;
+};
+
 //// Looping Arrays, Breaking and Continuing

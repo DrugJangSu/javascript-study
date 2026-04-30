@@ -702,6 +702,7 @@ const jonas = [
   ["Michael", "Peter", "Steven"],
   true,
 ];
+const types = [];
 
 // console.log(jonas[0]);
 // console.log(jonas[1]);
@@ -715,5 +716,23 @@ const jonas = [
 // }
 
 for (let i = 0; i < jonas.length; i++) {
-  console.log(jonas[i], typeof jonas[i]);
+  // Reading from jonas array
+  // console.log(jonas[i], typeof jonas[i]);
+
+  // Filling types array
+  // types[i] = typeof jonas[i];
+
+  // Push method
+  types.push(typeof jonas[i]);
 }
+
+// types[0] = "string";
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+console.log(ages);
