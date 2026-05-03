@@ -1,4 +1,5 @@
 //// Activating Strict Mode
+"use strict";
 /*
 "use strict";
 
@@ -694,6 +695,8 @@ for (let voter = 1; voter <= 50; voter++) {
 */
 
 //// Looping Arrays, Breaking and Continuing
+/*
+
 const jonas = [
   "Jonas",
   "Schmedtmann",
@@ -709,20 +712,20 @@ const types = [];
 // console.log(jonas[2]);
 // console.log(jonas[3]);
 // console.log(jonas[4]);
-// jonas[5] does not exist, so it will return undefined.
+// jonas[5] does NOT exist, so it will return undefined.
 
-// for (let i = 0; ; i++) {
-//   console.log(jonas[0]);
+// for (let i = 0; i < 5; i++) {
+//   console.log(jonas[i]);
 // }
 
 for (let i = 0; i < jonas.length; i++) {
-  // Reading from jonas array
+  /// Reading from jonas array
   // console.log(jonas[i], typeof jonas[i]);
 
-  // Filling types array
+  /// Filling types array
   // types[i] = typeof jonas[i];
 
-  // Push method
+  /// Push method
   types.push(typeof jonas[i]);
 }
 
@@ -736,3 +739,45 @@ for (let i = 0; i < years.length; i++) {
   ages.push(2037 - years[i]);
 }
 console.log(ages);
+
+/// Continue and Break for loops
+console.log("--- ONLY STRINGS ---");
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] !== "string") continue;
+  // this will skip the current iteration if the condition is true.
+
+  console.log(jonas[i], typeof jonas[i]);
+}
+console.log("--- BREAK WITH NUMBER ---");
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] == "number") break;
+  // this will stop the loop if the condition is true.
+
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+/// Assignment[Looping Arrays, Breaking and Continuing]
+const percentageOfWorld1 = function (population) {
+  return (population / 7900) * 100;
+};
+
+// My Solution
+const populations = [10, 1441, 332, 83];
+const percentages2 = [];
+for (let i = 0; i < populations.length; i++) {
+  percentages2.push(percentageOfWorld1(populations[i]));
+}
+console.log(percentages2);
+// Jonas Solution
+const populations = [10, 1441, 332, 83];
+const percentages2 = [];
+
+for (let i = 0; i < populations.length; i++) {
+  const perc = percentageOfWorld1(populations[i]);
+  percentages2.push(perc);
+}
+
+console.log(percentages2);
+*/
+
+//// Looping Backwards and Loops in Loops
