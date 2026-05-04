@@ -831,3 +831,57 @@ for (let i = 0; i < listOfNeighbours.length; i++)
 
 */
 //// The While Loop
+/*
+/* <previous for loop example>
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+}
+
+//<while loop example>
+let rep = 1;
+while (rep <= 10) {
+  console.log(`WHILE : Lifting weights repetition ${rep} 🏋️‍♀️`);
+  rep++;
+}
+
+// random dice roll example
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log(`Loop is about to end...`);
+}
+  
+/// Assignment[Looping Backwards and Loops in Loops]
+const percentageOfWorld1 = function (population) {
+  return (population / 7900) * 100;
+};
+const populations = [10, 1441, 332, 83];
+
+// My Previous Solution(for loop)
+const percentages2 = [];
+for (let i = 0; i < populations.length; i++) {
+  percentages2.push(percentageOfWorld1(populations[i]));
+}
+console.log(percentages2);
+
+// My Solution(while loop)
+const percentages3 = [];
+let i = 0;
+while (i < populations.length) {
+  percentages3.push(percentageOfWorld1(populations[i]));
+  i++;
+}
+console.log(percentages3);
+// Jonas Solution
+const percentages3 = [];
+let i = 0;
+while (i < populations.length) {
+  const perc = percentageOfWorld1(populations[i]);
+  percentages3.push(perc);
+  i++;
+}
+console.log(percentages3);
+*/
