@@ -1664,3 +1664,6 @@ while (i < populations.length) {
 }
 console.log(percentages3);
 */
+// ----------------------- End of Javascript Fundamentals Part 2 ----------------------- (Make sure to return to the coding challenges that are left)
+
+///// Developer Skills & Editor Setup ////
