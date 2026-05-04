@@ -1560,3 +1560,53 @@ console.log(percentages2);
 */
 
 //// Looping Backwards and Loops in Loops
+/*
+const jonas = [
+  `Jonas`,
+  `Schmedtmann`,
+  2037 - 1991,
+  `teacher`,
+  [`Michael`, `Peter`, `Steven`],
+  true,
+];
+// 0, 1, 2, 3, 4
+// 4, 3, 2, 1, 0
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+  console.log(i, jonas[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`------- Starting exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️‍♀️`);
+  }
+}
+
+/// Assignment[Looping Backwards and Loops in Loops]
+const listOfNeighbours = [
+  ["Canada", "Mexico"],
+  ["Spain"],
+  ["Norway", "Sweden", "Russia"],
+];
+
+// My solution
+for (let i = 0; i < listOfNeighbours.length; i++) {
+  for (let x = 0; x < listOfNeighbours[i].length; x++) {
+    console.log(`Neighbour: ${listOfNeighbours[i][x]}`);
+  }
+}
+// Jonas Solution
+const listOfNeighbours = [
+  ["Canada", "Mexico"],
+  ["Spain"],
+  ["Norway", "Sweden", "Russia"],
+];
+
+for (let i = 0; i < listOfNeighbours.length; i++)
+  for (let y = 0; y < listOfNeighbours[i].length; y++)
+    console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+
+*/
+//// The While Loop
