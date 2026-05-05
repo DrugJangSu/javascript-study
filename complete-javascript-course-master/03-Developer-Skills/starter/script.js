@@ -9,3 +9,5 @@ console.log(calcAge(1991));
 //// Installing Node.js and setting up a Dev Environment
 // Using live server extension in VS Code to run the code in the browser
 console.log(calcAge(1991));
+
+//// Learning How To Code
