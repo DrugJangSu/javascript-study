@@ -20,3 +20,4 @@ console.log(calcAge(1991));
 // Embrace the fact that you will never know everything. The JavaScript language is huge and is always changing. Focus on learning the fundamentals and then learn new features as you need them.
 // Try not to learn in isolation. Share your goals to make yourself accountable.
 // Courses are only the beginner of your journey, the starting point. You are never going to learn everything in a course. You have to practice on your own and learn new things on your own. The course is just the beginning of your journey, not the end.
+// Graph goes like this; EVERYTHING IS AWESOME - > CLIFF OF CONFUSION -> Frustration -> PIT OF DESPAIR -> After a long moment of practice and retries -> Back to awesome -> more competence -> JOB READY
