@@ -24,7 +24,7 @@ console.log(calcAge(1991));
 // Graph goes like this; EVERYTHING IS AWESOME - > CLIFF OF CONFUSION -> Frustration -> PIT OF DESPAIR -> After a long moment of practice and retries -> Back to awesome -> more competence -> JOB READY
 
 /// To sum up
-// Study courses : Understand code, take callenges and notes
+// Study courses : Understand code, take challenges and notes
 // Stay motivated! Keep writing lots of code on your own, no matter how bad
 // Learn with other people, devs and begineers, and share progress
 // Keep challenging yourself, run into lots of problems, and fix them
@@ -33,3 +33,10 @@ console.log(calcAge(1991));
 /// Always remember, you never magically be a web developer
 
 //// How to Think Like a Developer : Become a Problem Solver
+/// 4 Steps to Solve a Problem
+// <1. Make sure you 100% understand the problem. Ask the right questiios to get a clear picture of the problem.>
+// ex) Project Manager : "We need a function that revrses whatever we pass into it."
+// - what kind of data will we pass into the function? String? Array? Object? What should be returned? How to recognise whether the argument is a number, a string, or an array?
+// <2. Divide and Conquer : Break a big problem into smaller sub-problems and steps.>
+// - Check if argument is a number, a string, or an array. Implement reversing a number / a string / an array / and return reversed value.
+// <3. Don't be afraid to do as much research as you have to.>
