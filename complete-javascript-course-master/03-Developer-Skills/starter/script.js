@@ -40,3 +40,122 @@ console.log(calcAge(1991));
 // <2. Divide and Conquer : Break a big problem into smaller sub-problems and steps.>
 // - Check if argument is a number, a string, or an array. Implement reversing a number / a string / an array / and return reversed value.
 // <3. Don't be afraid to do as much research as you have to.>
+// - Ask google, stackoverflow, mdn docs.
+// <4. For bigger problems, write pseudo-code before writing the actual code.>
+// 여기서 pseudo-code는 실제 코드가 아니라, 문제를 해결하기 위한 단계들을 자연어로 작성하는 것을 말한다.
+// pseudo-code ----------------
+// 만약 날씨가 맑으면
+//   밖에 나가기
+// 아니면
+//   집에 있기
+// 실제 코드 --------------------
+// if (weather === "sunny") {
+//   goOutside();
+// } else {
+//   stayHome();
+// }
+
+// Example : Reverse a String
+// function reverse(value)
+//  if value type !string && !number && !array
+//    return "value"
+//  if value type == string
+//    reverse string
+//  if value type == number
+//    reverse number
+//  if value type == array
+//    reverse array
+
+// return reversed value
+
+//// Using Google, StackOverflow and MDN
+// PROBLEM 1 : Calculate the Temperature Amplitude
+// We work for a company building a smart home thermometer. Our most recent task is this: "Given an array of temperatures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error."
+/*
+const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+
+// 1) Understanding the problem
+// - What is temp amplitude? Answer: difference between highest and lowest temp
+// - How to calculate max and min temperatures?
+// - What is a sensor error? And what to do when it occurs?
+
+// 2) Breaking up into sub-problems
+// - How to ignore errors?
+// - Find max value in temp array
+// - Find min value in temp array
+// - Subtract min from max(which is amplitude) and return it
+
+const calcTempAmplitude = function (temps) {
+  let max = temps[0];
+  let min = temps[0];
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== `number`) continue;
+    if (curTemp > max) {
+      max = curTemp;
+    }
+    if (curTemp < min) {
+      min = curTemp;
+    }
+  }
+  console.log(max, min);
+  return max - min;
+};
+// calcTempAmplitude([3, 7, 4, 1, 8]);
+// calcTempAmplitude(temperatures);
+const amplitude = calcTempAmplitude(temperatures);
+console.log(amplitude);
+
+// PROBLEM 2 : Function should now receive 2 arrays of temps
+
+// 1) Understanding the problem
+// - With 2 arrays, should we implement the functionality twice? NO! Just merge 2 arrays together
+
+// 2) Breaking up into sub-problems
+// - Merge 2 arrays
+
+const calcTempAmplitudeNew = function (t1, t2) {
+  const temps = t1.concat(t2);
+  console.log(temps);
+  let max = temps[0];
+  let min = temps[0];
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== `number`) continue;
+    if (curTemp > max) {
+      max = curTemp;
+    }
+    if (curTemp < min) {
+      min = curTemp;
+    }
+  }
+  console.log(max, min);
+  return max - min;
+};
+
+const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
+console.log(amplitudeNew);
+*/
+//// Debugging with the Console and Breakpoints
+const measureKelvin = function () {
+  const measurement = {
+    type: `temp`,
+    unit: `celsius`,
+
+    // C) FIX THE BUG
+    // value: prompt(`Degrees celsius`)
+    value: Number(prompt(`Degrees celsius`)),
+  };
+  //   console.log(measurement);
+  // B) FIND THE BUG
+  console.table(measurement);
+
+  //   console.log(measurement.value);10
+  //   console.warn(measurement.value);
+  //   console.error(measurement.value);
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+// A) IDENTIFY THE BUG
+console.log(measureKelvin());
