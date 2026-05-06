@@ -31,3 +31,5 @@ console.log(calcAge(1991));
 // Round up your skillset with best practices and tools
 // Job ready! (But it never stops)
 /// Always remember, you never magically be a web developer
+
+//// How to Think Like a Developer : Become a Problem Solver
