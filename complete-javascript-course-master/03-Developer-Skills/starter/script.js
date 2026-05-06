@@ -11,3 +11,6 @@ console.log(calcAge(1991));
 console.log(calcAge(1991));
 
 //// Learning How To Code
+// Set a specific, measurable, realistic and time based goal
+// Understand the code that you're studying and typing. ALWAYS TYPE THE CODE, no copy and pasting
+// After you learn a new feature or concept, use it immediately
