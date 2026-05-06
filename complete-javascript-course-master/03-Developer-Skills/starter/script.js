@@ -28,3 +28,6 @@ console.log(calcAge(1991));
 // Stay motivated! Keep writing lots of code on your own, no matter how bad
 // Learn with other people, devs and begineers, and share progress
 // Keep challenging yourself, run into lots of problems, and fix them
+// Round up your skillset with best practices and tools
+// Job ready! (But it never stops)
+/// Always remember, you never magically be a web developer
