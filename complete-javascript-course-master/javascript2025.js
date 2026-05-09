@@ -1922,3 +1922,4 @@ const printForecast = function (arr) {
 printForecast(data1);
 printForecast(data2);
 */
+//// The Rise of AI Tools (ChatGPT, Copilot, Cursor AI, etc.)
