@@ -253,4 +253,39 @@ const printForecast = function (arr) {
 printForecast(data1);
 printForecast(data2);
 */
+
 //// The Rise of AI Tools (ChatGPT, Copilot, Cursor AI, etc.)
+/// The workflow of Using AI for Coding
+// - Make sure you 100% understand the problem. Ask questions to get a clear picture
+// - Choose AI and give it a very specific prompt and enough context (language, style, etc.)
+// AI generates the solution as code
+// - Review and test the output solution. Make sure you introduce no bugs into your app
+// - Correct or improve the solution, and repeat
+// - Integrate the solution into your app
+
+/// Guidelines for safe use of AI
+// <BEFORE YOU USE AI>
+// - You need to know how to code on your own. Fundamental skills are 100% essential.
+// - You need to be able to solve problems on your own.
+// - You need to have a very critical thinking (AI code contains a surprising amount of bugs and bad code and errors)
+// - You need to have curiosity and joy while coding
+// ## Don't use AI without knowing what you're doing. Otherwise AI will turn you into a terrible programmer!
+// ## Use AI as an assistant, not a replacement. Save time on repetitive and boring tasks. It's also great for learning!
+
+// <INCORPORATE AI CODE>
+// - When you could have written the code yourself
+// - When you truly understand the generated code
+// - when you have ensured the code is 100% correct
+// - When you're not using the code for mission-critical parts of your apps
+
+/// Will AI replace developers and take your job?
+// - There's a lot of hype around AI right now. In the past, tools like Dreamweaver, Wordpress, or Wix were supposed to replace web developers.
+// - Things will change : a portion of apps will be written by AI. You might write less code in the future, but that's not a bad thing!
+// - You will still be needed! You're the one who maintains control and implements the app architecture. You are the one who asks AI to write the code in the first place, reviews it, corrects it, and integrates it into the app.
+// - Software developers do a lot more than just writing code: maintain the bigger picture of huge projects / think about software / implement complex design principles / are creative / they collaborate with other developers and cilents
+// - AI-generated code is still buggy, and AI is not very good at debugging.
+// - The world needs more software than can be built by humans right now.
+// - AI will help us, not replace us!
+
+//// Solving CHALLENGE #2 Wih AI
+// -
