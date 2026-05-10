@@ -1922,4 +1922,217 @@ const printForecast = function (arr) {
 printForecast(data1);
 printForecast(data2);
 */
+
 //// The Rise of AI Tools (ChatGPT, Copilot, Cursor AI, etc.)
+/// The workflow of Using AI for Coding
+// - Make sure you 100% understand the problem. Ask questions to get a clear picture
+// - Choose AI and give it a very specific prompt and enough context (language, style, etc.)
+// AI generates the solution as code
+// - Review and test the output solution. Make sure you introduce no bugs into your app
+// - Correct or improve the solution, and repeat
+// - Integrate the solution into your app
+
+/// Guidelines for safe use of AI
+// <BEFORE YOU USE AI>
+// - You need to know how to code on your own. Fundamental skills are 100% essential.
+// - You need to be able to solve problems on your own.
+// - You need to have a very critical thinking (AI code contains a surprising amount of bugs and bad code and errors)
+// - You need to have curiosity and joy while coding
+// ## Don't use AI without knowing what you're doing. Otherwise AI will turn you into a terrible programmer!
+// ## Use AI as an assistant, not a replacement. Save time on repetitive and boring tasks. It's also great for learning!
+
+// <INCORPORATE AI CODE>
+// - When you could have written the code yourself
+// - When you truly understand the generated code
+// - when you have ensured the code is 100% correct
+// - When you're not using the code for mission-critical parts of your apps
+
+/// Will AI replace developers and take your job?
+// - There's a lot of hype around AI right now. In the past, tools like Dreamweaver, Wordpress, or Wix were supposed to replace web developers.
+// - Things will change : a portion of apps will be written by AI. You might write less code in the future, but that's not a bad thing!
+// - You will still be needed! You're the one who maintains control and implements the app architecture. You are the one who asks AI to write the code in the first place, reviews it, corrects it, and integrates it into the app.
+// - Software developers do a lot more than just writing code: maintain the bigger picture of huge projects / think about software / implement complex design principles / are creative / they collaborate with other developers and cilents
+// - AI-generated code is still buggy, and AI is not very good at debugging.
+// - The world needs more software than can be built by humans right now.
+// - AI will help us, not replace us!
+
+//// Solving CHALLENGE #2 Wih AI
+// CODING CHALLENGE #2 With AI
+
+/*
+Let's say you're building a time tracking application for freelancers. At some point in building this app, you need a function that receives daily work hours for a certain week, and returns;
+1. Total hours worked
+2. Average daily hours
+3. The day with the most hours worked
+4. Number of days worked
+5. Whether the week was full-time (worked 35 hours or more)
+
+TEST DATA : [7.5, 8, 6.5, 0, 8.5, 4, 0]
+
+Use the Following text on ChatGPT:
+I'm building a time tracking application for freelancers. Write a function called analyzeWorkWeek that receives daily work hours for a certain week, and returns an object with the following data:
+1. Total hours worked
+2. Average daily hours (round to one decimal place)
+3. The day with the most hours worked (assume monday is day 0 in the array)
+4. Number of days worked (days with more than 0 hours)
+5. Whether the week was full-time (worked 35 hours or more)
+*/
+/*
+// Chatgpt personal result:
+function analyzeWorkWeek(hours) {
+  // 1. Total hours worked
+  const totalHours = hours.reduce((sum, day) => sum + day, 0);
+
+  // 2. Average daily hours
+  const averageHours = Number((totalHours / hours.length).toFixed(1));
+
+  // 3. Day with the most hours worked
+  let maxHours = hours[0];
+  let maxDay = 0;
+
+  for (let i = 1; i < hours.length; i++) {
+    if (hours[i] > maxHours) {
+      maxHours = hours[i];
+      maxDay = i;
+    }
+  }
+
+  // 4. Number of days worked
+  const daysWorked = hours.filter(day => day > 0).length;
+
+  // 5. Full-time status
+  const isFullTime = totalHours >= 35;
+
+  return {
+    totalHours,
+    averageHours,
+    maxDay,
+    daysWorked,
+    isFullTime,
+  };
+}
+
+// Example usage
+const weeklyHours = [7.5, 8, 6.5, 0, 8.5, 5, 0];
+const analysis = analyzeWorkWeek(weeklyHours);
+console.log(analysis);
+
+
+// ChatGPT : change maxday to be an actual work day like monday
+// ChatGPT changed Result;
+
+function analyzeWorkWeek(hours) {
+  const days = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+  ];
+
+  // 1. Total hours worked
+  const totalHours = hours.reduce((sum, day) => sum + day, 0);
+
+  // 2. Average daily hours
+  const averageHours = Number((totalHours / hours.length).toFixed(1));
+
+  // 3. Day with the most hours worked
+  let maxHours = hours[0];
+  let busiestDayIndex = 0;
+
+  for (let i = 1; i < hours.length; i++) {
+    if (hours[i] > maxHours) {
+      maxHours = hours[i];
+      busiestDayIndex = i;
+    }
+  }
+
+  const maxDay = days[busiestDayIndex];
+
+  // 4. Number of days worked
+  const daysWorked = hours.filter(day => day > 0).length;
+
+  // 5. Full-time status
+  const isFullTime = totalHours >= 35;
+
+  return {
+    totalHours,
+    averageHours,
+    maxDay,
+    daysWorked,
+    isFullTime,
+  };
+}
+
+const weeklyHours = [7.5, 8, 6.5, 0, 8.5, 4, 0];
+const analysis = analyzeWorkWeek(weeklyHours);
+console.log(analysis);
+
+const weeklyHours2 = [7.5, 8, 6.5, 0, 8.5];
+const analysis2 = analyzeWorkWeek(weeklyHours2);
+console.log(analysis2);
+
+// ChatGPT : second the function should require the input array to have exactly 7 days. update the function accordingly
+// Third ChatGPT changed resuit;
+
+function analyzeWorkWeek(hours) {
+  // Validate input
+  if (!Array.isArray(hours) || hours.length !== 7) {
+    throw new Error('Input must be an array with exactly 7 days.');
+  }
+
+  const days = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+  ];
+
+  // 1. Total hours worked
+  const totalHours = hours.reduce((sum, day) => sum + day, 0);
+
+  // 2. Average daily hours
+  const averageHours = Number((totalHours / hours.length).toFixed(1));
+
+  // 3. Day with the most hours worked
+  let maxHours = hours[0];
+  let busiestDayIndex = 0;
+
+  for (let i = 1; i < hours.length; i++) {
+    if (hours[i] > maxHours) {
+      maxHours = hours[i];
+      busiestDayIndex = i;
+    }
+  }
+
+  const maxDay = days[busiestDayIndex];
+
+  // 4. Number of days worked
+  const daysWorked = hours.filter(day => day > 0).length;
+
+  // 5. Full-time status
+  const isFullTime = totalHours >= 35;
+
+  return {
+    totalHours,
+    averageHours,
+    maxDay,
+    daysWorked,
+    isFullTime,
+  };
+}
+
+// Example usage
+const weeklyHours = [7.5, 8, 6.5, 0, 8.5, 4, 0];
+const analysis = analyzeWorkWeek(weeklyHours);
+console.log(analysis);
+
+const weeklyHours2 = [7.5, 8, 6.5, 0, 8.5];
+const analysis2 = analyzeWorkWeek(weeklyHours2);
+console.log(analysis2);
+*/

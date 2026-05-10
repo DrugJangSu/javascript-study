@@ -299,4 +299,171 @@ Let's say you're building a time tracking application for freelancers. At some p
 5. Whether the week was full-time (worked 35 hours or more)
 
 TEST DATA : [7.5, 8, 6.5, 0, 8.5, 4, 0]
+
+Use the Following text on ChatGPT:
+I'm building a time tracking application for freelancers. Write a function called analyzeWorkWeek that receives daily work hours for a certain week, and returns an object with the following data:
+1. Total hours worked
+2. Average daily hours (round to one decimal place)
+3. The day with the most hours worked (assume monday is day 0 in the array)
+4. Number of days worked (days with more than 0 hours)
+5. Whether the week was full-time (worked 35 hours or more)
+*/
+/*
+// Chatgpt personal result:
+function analyzeWorkWeek(hours) {
+  // 1. Total hours worked
+  const totalHours = hours.reduce((sum, day) => sum + day, 0);
+
+  // 2. Average daily hours
+  const averageHours = Number((totalHours / hours.length).toFixed(1));
+
+  // 3. Day with the most hours worked
+  let maxHours = hours[0];
+  let maxDay = 0;
+
+  for (let i = 1; i < hours.length; i++) {
+    if (hours[i] > maxHours) {
+      maxHours = hours[i];
+      maxDay = i;
+    }
+  }
+
+  // 4. Number of days worked
+  const daysWorked = hours.filter(day => day > 0).length;
+
+  // 5. Full-time status
+  const isFullTime = totalHours >= 35;
+
+  return {
+    totalHours,
+    averageHours,
+    maxDay,
+    daysWorked,
+    isFullTime,
+  };
+}
+
+// Example usage
+const weeklyHours = [7.5, 8, 6.5, 0, 8.5, 5, 0];
+const analysis = analyzeWorkWeek(weeklyHours);
+console.log(analysis);
+
+
+// ChatGPT : change maxday to be an actual work day like monday
+// ChatGPT changed Result;
+
+function analyzeWorkWeek(hours) {
+  const days = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+  ];
+
+  // 1. Total hours worked
+  const totalHours = hours.reduce((sum, day) => sum + day, 0);
+
+  // 2. Average daily hours
+  const averageHours = Number((totalHours / hours.length).toFixed(1));
+
+  // 3. Day with the most hours worked
+  let maxHours = hours[0];
+  let busiestDayIndex = 0;
+
+  for (let i = 1; i < hours.length; i++) {
+    if (hours[i] > maxHours) {
+      maxHours = hours[i];
+      busiestDayIndex = i;
+    }
+  }
+
+  const maxDay = days[busiestDayIndex];
+
+  // 4. Number of days worked
+  const daysWorked = hours.filter(day => day > 0).length;
+
+  // 5. Full-time status
+  const isFullTime = totalHours >= 35;
+
+  return {
+    totalHours,
+    averageHours,
+    maxDay,
+    daysWorked,
+    isFullTime,
+  };
+}
+
+const weeklyHours = [7.5, 8, 6.5, 0, 8.5, 4, 0];
+const analysis = analyzeWorkWeek(weeklyHours);
+console.log(analysis);
+
+const weeklyHours2 = [7.5, 8, 6.5, 0, 8.5];
+const analysis2 = analyzeWorkWeek(weeklyHours2);
+console.log(analysis2);
+
+// ChatGPT : second the function should require the input array to have exactly 7 days. update the function accordingly
+// Third ChatGPT changed resuit;
+
+function analyzeWorkWeek(hours) {
+  // Validate input
+  if (!Array.isArray(hours) || hours.length !== 7) {
+    throw new Error('Input must be an array with exactly 7 days.');
+  }
+
+  const days = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+  ];
+
+  // 1. Total hours worked
+  const totalHours = hours.reduce((sum, day) => sum + day, 0);
+
+  // 2. Average daily hours
+  const averageHours = Number((totalHours / hours.length).toFixed(1));
+
+  // 3. Day with the most hours worked
+  let maxHours = hours[0];
+  let busiestDayIndex = 0;
+
+  for (let i = 1; i < hours.length; i++) {
+    if (hours[i] > maxHours) {
+      maxHours = hours[i];
+      busiestDayIndex = i;
+    }
+  }
+
+  const maxDay = days[busiestDayIndex];
+
+  // 4. Number of days worked
+  const daysWorked = hours.filter(day => day > 0).length;
+
+  // 5. Full-time status
+  const isFullTime = totalHours >= 35;
+
+  return {
+    totalHours,
+    averageHours,
+    maxDay,
+    daysWorked,
+    isFullTime,
+  };
+}
+
+// Example usage
+const weeklyHours = [7.5, 8, 6.5, 0, 8.5, 4, 0];
+const analysis = analyzeWorkWeek(weeklyHours);
+console.log(analysis);
+
+const weeklyHours2 = [7.5, 8, 6.5, 0, 8.5];
+const analysis2 = analyzeWorkWeek(weeklyHours2);
+console.log(analysis2);
 */
