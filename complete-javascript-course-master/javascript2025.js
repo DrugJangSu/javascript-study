@@ -2136,3 +2136,93 @@ const weeklyHours2 = [7.5, 8, 6.5, 0, 8.5];
 const analysis2 = analyzeWorkWeek(weeklyHours2);
 console.log(analysis2);
 */
+///// HTML & CSS Crash Course
+//// Basic HTML Structure and Elements
+/*
+<!-- <html>
+  <head>
+    <title>Learning HTML & CSS</title>
+  </head>
+
+  <body>
+    <h1>JavaScript is fun, but so is HTML & CSS!</h1>
+    <p>
+      You can learn Javascript without HTML and CSS, but for DOM manipulation
+      it's useful to have some basic ideas of HTML & CSS.
+    </p>
+    <h6>Another Heading</h6>
+    <p>Just another paragraph</p>
+  </body>
+</html> -->
+
+<!-- Easy way to make HTML in VS code 
+ -> !(exclamination mark) + tab, and the following shows up -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html> -->
+
+<!-- And so you can use it in the structure as following; -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning HTML & CSS</title>
+  </head>
+  <body>
+    <h1>JavaScript is fun, but so is HTML & CSS!</h1>
+    <p>
+      You can learn Javascript without HTML and CSS, but for DOM manipulation
+      it's useful to have some basic ideas of HTML & CSS.
+    </p>
+    <h2>Another Heading</h2>
+    <p>Just another paragraph</p>
+  </body>
+</html>
+//// Attributes, Classes and IDs
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning HTML & CSS</title>
+  </head>
+  <body>
+    <h1>JavaScript is fun, but so is HTML & CSS!</h1>
+    <p class="first">
+      You can learn Javascript without HTML and CSS, but for DOM manipulation
+      it's useful to have some basic ideas of HTML & CSS. You can learn more
+      about it
+      <a
+        href="https://www.udemy.com/user/jonasschmedtmann/?srsltid=AfmBOorOuUYodqveD_uDY9ZS-nZV2cNEWGx7N1rgchI3KygPZndB9NSr"
+        >on Udemy</a
+      >.
+    </p>
+    <h2>Another Heading</h2>
+    <p class="second">Just another paragraph</p>
+    <img
+      id="course-image"
+      src="https://img-c.udemycdn.com/course/480x270/437398_46c3_10.jpg"
+    />
+
+    <form id="your-name">
+      <h2>Your name here</h2>
+      <p>Please fill in this form :)</p>
+
+      <input type="text" placeholder="Your name" />
+      <button>OK!</button>
+    </form>
+  </body>
+</html>
+*/
+//// Basic Styling with CSS
