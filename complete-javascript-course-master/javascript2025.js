@@ -2189,7 +2189,9 @@ console.log(analysis2);
     <p>Just another paragraph</p>
   </body>
 </html>
+
 //// Attributes, Classes and IDs
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -2226,3 +2228,64 @@ console.log(analysis2);
 </html>
 */
 //// Basic Styling with CSS
+
+/// index.html
+// <!doctype html>
+// <html lang="en">
+//   <head>
+//     <meta charset="UTF-8" />
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+//     <link href="style.css" rel="stylesheet" />
+//     <title>Learning HTML & CSS</title>
+//   </head>
+//   <body>
+//     <h1>JavaScript is fun, but so is HTML & CSS!</h1>
+//     <p class="first">
+//       You can learn Javascript without HTML and CSS, but for DOM manipulation
+//       it's useful to have some basic ideas of HTML & CSS. You can learn more
+//       about it
+//       <a
+//         href="https://www.udemy.com/user/jonasschmedtmann/?srsltid=AfmBOorOuUYodqveD_uDY9ZS-nZV2cNEWGx7N1rgchI3KygPZndB9NSr"
+//         >on Udemy</a
+//       >.
+//     </p>
+//     <h2>Another Heading</h2>
+//     <p class="second">Just another paragraph</p>
+//     <img
+//       id="course-image"
+//       src="https://img-c.udemycdn.com/course/480x270/437398_46c3_10.jpg"
+//     />
+
+//     <form id="your-name">
+//       <h2>Your name here</h2>
+//       <p class="first">Please fill in this form :)</p>
+
+//       <input type="text" placeholder="Your name" />
+//       <button>OK!</button>
+//     </form>
+//   </body>
+// </html>
+
+/// style.css
+// body {
+//   background-color: hsl(60, 11%, 85%);
+//   font-family: Arial;
+//   font-size: 20px;
+// }
+
+// h1 {
+//   font-size: 40px;
+// }
+
+// .first {
+//   color: red;
+// }
+// /* . is for the class, and the "first" is the class name */
+// #your-name {
+//   background-color: hsl(51, 98%, 65%);
+//   border: 5px solid #444;
+// }
+// /* # is for id */
+
+//// Introduction to the CSS Box Model
