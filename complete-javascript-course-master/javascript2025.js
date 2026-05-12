@@ -2289,3 +2289,109 @@ console.log(analysis2);
 // /* # is for id */
 
 //// Introduction to the CSS Box Model
+/// The CSS BOX MODEL
+// Content : text, images, etc
+// Padding : transparent area around the content, inside the box;
+// Border: goes around the padding and the content;
+// Margin : Space between boxes;
+
+// index.html
+// <!doctype html>
+// <html lang="en">
+//   <head>
+//     <meta charset="UTF-8" />
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+//     <link href="style.css" rel="stylesheet" />
+//     <title>Learning HTML & CSS</title>
+//   </head>
+//   <body>
+//     <h1>JavaScript is fun, but so is HTML & CSS!</h1>
+//     <p class="first">
+//       You can learn Javascript without HTML and CSS, but for DOM manipulation
+//       it's useful to have some basic ideas of HTML & CSS. You can learn more
+//       about it
+//       <a
+//         href="https://www.udemy.com/user/jonasschmedtmann/?srsltid=AfmBOorOuUYodqveD_uDY9ZS-nZV2cNEWGx7N1rgchI3KygPZndB9NSr"
+//         >on Udemy</a
+//       >.
+//     </p>
+//     <h2>Another Heading</h2>
+//     <p class="second">Just another paragraph</p>
+//     <img
+//       id="course-image"
+//       src="https://img-c.udemycdn.com/course/480x270/437398_46c3_10.jpg"
+//     />
+
+//     <form id="your-name">
+//       <h2>Your name here</h2>
+//       <p class="first">Please fill in this form :)</p>
+
+//       <input type="text" placeholder="Your name" />
+//       <button>OK!</button>
+//     </form>
+//   </body>
+// </html>
+
+// style.css
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+// /* is for selecting all*/
+
+// body {
+//   background-color: hsl(60, 11%, 85%);
+//   font-family: Arial;
+//   font-size: 20px;
+//   padding: 50px;
+// }
+
+// h1 {
+//   font-size: 35px;
+//   margin-bottom: 25px;
+// }
+
+// h2 {
+//   margin-bottom: 20px;
+//   text-align: center;
+// }
+
+// p {
+//   margin-bottom: 20px;
+// }
+// /* p selector is a way to select all paragraph elements regardless of any class names */
+// .first {
+//   color: red;
+// }
+// /* . is for the class, and the "first" is the class name */
+// #your-name {
+//   background-color: hsl(51, 98%, 65%);
+//   border: 5px solid #444;
+//   width: 400px;
+//   padding: 25px;
+//   margin-top: 30px;
+// }
+// /* # is for id */
+
+// input,
+// button {
+//   padding: 10px;
+//   font-size: 16px;
+// }
+
+// a {
+//   background-color: yellowgreen;
+// }
+
+// #course-image {
+//   width: 200px;
+// }
+
+// #your-name h2 {
+//   color: olivedrab;
+// }
+
+///// JavaScript in the Browser : DOM and Events  ----------------------------------------------------
+//// PROJECT #1 : Guess My Number!

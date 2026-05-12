@@ -1,13 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* is for selecting all*/
+
 body {
   background-color: hsl(60, 11%, 85%);
   font-family: Arial;
   font-size: 20px;
+  padding: 50px;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 35px;
+  margin-bottom: 25px;
 }
 
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 20px;
+}
+/* p selector is a way to select all paragraph elements regardless of any class names */
 .first {
   color: red;
 }
@@ -15,5 +33,26 @@ h1 {
 #your-name {
   background-color: hsl(51, 98%, 65%);
   border: 5px solid #444;
+  width: 400px;
+  padding: 25px;
+  margin-top: 30px;
 }
 /* # is for id */
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+a {
+  background-color: yellowgreen;
+}
+
+#course-image {
+  width: 200px;
+}
+
+#your-name h2 {
+  color: olivedrab;
+}
