@@ -2415,3 +2415,19 @@ console.log(analysis2);
 /// DOM ! == Javascript.
 // DOM Methods and Properties for DOM Manipulation is not part of JS.
 // But it can interact wtih Javascript, as other WEB APIs like Timers and Fetch etc
+
+//// Selecting and Manipulating Elements
+/// script.js
+
+// 'use strict';
+
+// console.log(document.querySelector(`.message`).textContent);
+// document.querySelector(`.message`).textContent = `🎉 Correct Number!`;
+
+// document.querySelector(`.number`).textContent = 13;
+// document.querySelector(`.score`).textContent = 10;
+
+// document.querySelector(`.guess`).value = 23;
+// console.log(document.querySelector(`.guess`).value);
+
+//// Handling Click Events
