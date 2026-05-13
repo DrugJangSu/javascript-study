@@ -2395,3 +2395,15 @@ console.log(analysis2);
 
 ///// JavaScript in the Browser : DOM and Events  ----------------------------------------------------
 //// PROJECT #1 : Guess My Number!
+
+//// What's the DOM and DOM Manipulation
+// DOM (Document Object Model)
+// DOM은 웹 페이지의 구조를 객체 트리 형태로 표현하는 모델입니다. HTML 문서는 노드와 요소로 구성되며, 각 노드는 JavaScript를 통해 접근하고 조작할 수 있습니다. 이는 웹 개발자들이 동적으로 웹 페이지의 내용을 변경하거나 인터페이스를 상호 작용하게 만듭니다.
+
+// DOM 트리 구조
+// DOM은 HTML 문서를 트리 형태로 표현합니다. 각 노드는 다음과 같은 속성을 가집니다:
+
+// 노드: 요소, 텍스트, 특성 등의 기본 단위.
+// 요소 (Element): HTML 태그와 그 내용.
+// 텍스트 (Text): 요소 내부의 텍스트 내용.
+// 특성 (Attribute): 요소에 추가된 속성을 나타냅니다.
