@@ -3196,5 +3196,30 @@ btnHold.addEventListener(`click`, function () {
 
 btnNew.addEventListener(`click`, init);
 */
-///// End of PROJECT #3 : PIG GAME
-///// Section 8 : How JavaScript Works Behind the Scenes
+///// End of PROJECT #3 : PIG GAME -------------------------------
+
+///// Section 8 : How JavaScript Works Behind the Scenes ----------------------------------------------------
+
+//// An High-Level Overview of JavaScript
+/// Revisiting the JavaScript Language
+
+/// JavaScript is a high-level, prototype-based, multi-paradigm interpreted or just-in-time dybanuc single-threaded garbage-collected programming language with first-class functions and a non-blocking event loop concurrency model.
+
+/// High-level
+// -> Unlike C+ which developers have to manage resources manually, high level langauges like JavaScript (including Python) does it automatically, so developers can focus on the logic of the program rather than the low-level details of memory management and other system resources.
+/// Garbage-collected
+// -> JavaScript automatically manages memory allocation and deallocation. It uses a garbage collector to identify and free up memory that is no longer in use, preventing memory leaks and improving performance.
+/// Interpreted or just-in-time compiled
+// -> JavaScript can be interpreted at runtime or compiled to machine code at runtime for better performance.
+/// Multi-paradigm
+// -> A paradigm is an approach and mindset of structuring code, which will direct your coding style and technique.
+// -> Procedural, Object Oriented(OOP), Functioning Programming(FP)
+// -> Paradigms could be Imperative vs Declarative etc
+/// Prototype-based object-oriented
+// -> JavaScript uses prototypes for inheritance, allowing objects to inherit properties and methods from other objects. This is different from class-based inheritance used in languages like Java or C++.
+/// First-class functions
+// -> Functions in JavaScript are treated as variables. We can pass them into other functions, and return them from functions.
+/// Dynamic
+// -> Dynamically typed means that you don't have to specify the type of a variable when you declare it. The type is determined at runtime based on the value assigned to the variable. This allows for more flexibility in coding, but can also lead to unexpected behavior if not used carefully.
+/// Single-threaded & Non-blocking event loop
+// -> Concurrency model is how the Javascript engine handles multiple tasks happening at the same time. The reason for this is because Javascript runs in one single thread- which means it can do only one thing at a time. But if it's based about a long running task, it would block a single thread. But since we want non-blocking behavior, to achieve that Javascript uses an event loop which takes long running tasks, executes them in the background and puts them back in the main thread once they're done.
