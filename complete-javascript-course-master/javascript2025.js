@@ -3207,19 +3207,36 @@ btnNew.addEventListener(`click`, init);
 
 /// High-level
 // -> Unlike C+ which developers have to manage resources manually, high level langauges like JavaScript (including Python) does it automatically, so developers can focus on the logic of the program rather than the low-level details of memory management and other system resources.
+// 고급 언어는 개발자가 하드웨어와 직접 상호작용하지 않고 프로그램의 논리에 집중할 수 있게 함. C++와 같은 언어에서는 메모리 관리를 개발자가 직접 처리해야 하지만, JavaScript는 이러한 작업을 자동으로 수행하므로 개발자는 프로그램의 논리에 집중할 수 있음.
+
 /// Garbage-collected
 // -> JavaScript automatically manages memory allocation and deallocation. It uses a garbage collector to identify and free up memory that is no longer in use, preventing memory leaks and improving performance.
+// JavaScript는 사용하지 않는 메모리를 자동으로 정리하여 메모리 누수를 방지하고 성능을 향상시킴.
+
 /// Interpreted or just-in-time compiled
 // -> JavaScript can be interpreted at runtime or compiled to machine code at runtime for better performance.
+// JavaScript는 실행 시 해석되거나 코드가 실행되는 동안 컴파일될 수 있어 코드의 성능을 개선하면서도 실행 시점에서 필요한 컴파일을 수행할 수 있게 함.
+
 /// Multi-paradigm
 // -> A paradigm is an approach and mindset of structuring code, which will direct your coding style and technique.
 // -> Procedural, Object Oriented(OOP), Functioning Programming(FP)
 // -> Paradigms could be Imperative vs Declarative etc
+// 패러다임은 코드를 구조화하는 방식으로, JavaScript는 절차적, 객체 지향 프로그래밍, 함수형 프로그래밍 등 다양한 패러다임을 지원함.
+
 /// Prototype-based object-oriented
 // -> JavaScript uses prototypes for inheritance, allowing objects to inherit properties and methods from other objects. This is different from class-based inheritance used in languages like Java or C++.
+// JavaScript는 프로토타입을 사용하여 객체 간 상속을 구현함. Java나 C++와 같은 클래스 기반 상속과는 달리, JavaScript에서는 객체가 다른 객체로부터 속성과 메서드를 상속받을 수 있음.
+
 /// First-class functions
 // -> Functions in JavaScript are treated as variables. We can pass them into other functions, and return them from functions.
+// 일급 함수 -> JavaScript에서 함수는 변수처럼 취급되며, 함수를 다른 함수에 인수로 전달하거나 함수에서 반환할 수 있음. 이걸로 함수를 일급 객체로 다루어 콜백, 고차함수 등의 고급 기능을 활용할 수 있음.
+
 /// Dynamic
 // -> Dynamically typed means that you don't have to specify the type of a variable when you declare it. The type is determined at runtime based on the value assigned to the variable. This allows for more flexibility in coding, but can also lead to unexpected behavior if not used carefully.
+// 동적 -> 동적으로 타이핑된 언어는 변수 선언 시 타입을 지정하지 않아도 됨. 대신 변수에 할당된 값의 타입에 따라 결정되나, 코드 작성 시 유연성이 높아지는 대신 타입 오류 및 예기치 못한 버그 발생 가능성이 높음. (Lecturer 말로는 JavaScript 베이스지만 작성할 때마다 type를 쓰는 언어는 TypeScript를 쓰면 된다고 함)
+
 /// Single-threaded & Non-blocking event loop
 // -> Concurrency model is how the Javascript engine handles multiple tasks happening at the same time. The reason for this is because Javascript runs in one single thread- which means it can do only one thing at a time. But if it's based about a long running task, it would block a single thread. But since we want non-blocking behavior, to achieve that Javascript uses an event loop which takes long running tasks, executes them in the background and puts them back in the main thread once they're done.
+// Javascript 엔진은 한번에 한 작업만 수행 가능하며, 장시간 실행되는 작업이 있으면 단일 스레드가 차단될 수 있음. 이를 해결하기 위해 JavaScript는 이벤트 루프를 사용하여 장시간 실행되는 작업을 백그라운드에서 처리하고 완료되면 메인 스레드로 다시 가져와 비동기적으로 처리함.
+
+//// The Javascript Engine and Runtime
