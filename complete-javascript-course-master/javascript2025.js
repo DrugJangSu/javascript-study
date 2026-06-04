@@ -3240,3 +3240,18 @@ btnNew.addEventListener(`click`, init);
 // Javascript 엔진은 한번에 한 작업만 수행 가능하며, 장시간 실행되는 작업이 있으면 단일 스레드가 차단될 수 있음. 이를 해결하기 위해 JavaScript는 이벤트 루프를 사용하여 장시간 실행되는 작업을 백그라운드에서 처리하고 완료되면 메인 스레드로 다시 가져와 비동기적으로 처리함.
 
 //// The Javascript Engine and Runtime
+
+/// JS Engine :  Program that executes the JavaScript code
+
+/// Computer Science Sidenote : Compilation vs Interpretation
+// Compilation : Entire code is coverted into machine code at once, and written to a binary file that can be executed by a computer.
+// Interpretation : Interpreter runs through the source code and executes it line by line.
+
+// Javascript used to be a purely interpreted language, but it used to be very slow. Today low performance is not acceptable, so modern JavaScript engines use a combination of both compilation and interpretation to achieve better performance. They compile the code to machine code at runtime using just-in-time (JIT) compilation.
+// Just-in-time compilation : Entire code is converted into machine code at once, then executed immediately.
+// Js Engine works like ; Parsing - > Compilation(AST, Just-in-time compilation) -> Execution(happens in Call Stack) -> Optimation(during execution) -> back to compilation and so on.
+
+/// The Bigger Picture : JavaScript Runtime
+// JavaScript runtime is the environment in which JavaScript code is executed. It consists of the JavaScript engine and other components that provide additional functionality, such as the Web APIs, the event loop, and the callback queue. The runtime allows JavaScript to interact with the browser and perform tasks like manipulating the DOM, making network requests, and handling user events.
+// Web APIs include DOM, Timers, Fetch API etc. These are not part of the JavaScript language itself, but are provided by the environment (like browsers) in which JavaScript runs. They allow JavaScript to perform tasks that are not natively supported by the language, such as manipulating the DOM, making network requests, and handling user events.
+// Callback queue is a queue of callback functions that are waiting to be executed. When an asynchronous operation is completed, its callback function is added to the callback queue. The event loop continuously checks the call stack and the callback queue, and if the call stack is empty, it takes the first callback from the queue and pushes it onto the call stack for execution. (click, timer, data etc)
