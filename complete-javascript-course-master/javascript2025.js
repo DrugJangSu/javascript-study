@@ -3239,7 +3239,7 @@ btnNew.addEventListener(`click`, init);
 // -> Concurrency model is how the Javascript engine handles multiple tasks happening at the same time. The reason for this is because Javascript runs in one single thread- which means it can do only one thing at a time. But if it's based about a long running task, it would block a single thread. But since we want non-blocking behavior, to achieve that Javascript uses an event loop which takes long running tasks, executes them in the background and puts them back in the main thread once they're done.
 // Javascript 엔진은 한번에 한 작업만 수행 가능하며, 장시간 실행되는 작업이 있으면 단일 스레드가 차단될 수 있음. 이를 해결하기 위해 JavaScript는 이벤트 루프를 사용하여 장시간 실행되는 작업을 백그라운드에서 처리하고 완료되면 메인 스레드로 다시 가져와 비동기적으로 처리함.
 
-//// The Javascript Engine and Runtime
+//// The Javascript Engine and Runtime --------------------------------------------
 
 /// JS Engine :  Program that executes the JavaScript code
 
@@ -3256,4 +3256,4 @@ btnNew.addEventListener(`click`, init);
 // Web APIs include DOM, Timers, Fetch API etc. These are not part of the JavaScript language itself, but are provided by the environment (like browsers) in which JavaScript runs. They allow JavaScript to perform tasks that are not natively supported by the language, such as manipulating the DOM, making network requests, and handling user events.
 // Callback queue is a queue of callback functions that are waiting to be executed. When an asynchronous operation is completed, its callback function is added to the callback queue. The event loop continuously checks the call stack and the callback queue, and if the call stack is empty, it takes the first callback from the queue and pushes it onto the call stack for execution. (click, timer, data etc)
 
-//// Execution Contexts and The Call Stack
+//// Execution Contexts and The Call Stack  --------------------------------------------
