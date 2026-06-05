@@ -3198,7 +3198,7 @@ btnNew.addEventListener(`click`, init);
 */
 ///// End of PROJECT #3 : PIG GAME -------------------------------
 
-///// Section 8 : How JavaScript Works Behind the Scenes ----------------------------------------------------
+///// Section 8 : How JavaScript Works Behind the Scenes --------------------------------------------------------------------------------------------------------
 
 //// An High-Level Overview of JavaScript
 /// Revisiting the JavaScript Language
@@ -3239,7 +3239,7 @@ btnNew.addEventListener(`click`, init);
 // -> Concurrency model is how the Javascript engine handles multiple tasks happening at the same time. The reason for this is because Javascript runs in one single thread- which means it can do only one thing at a time. But if it's based about a long running task, it would block a single thread. But since we want non-blocking behavior, to achieve that Javascript uses an event loop which takes long running tasks, executes them in the background and puts them back in the main thread once they're done.
 // Javascript 엔진은 한번에 한 작업만 수행 가능하며, 장시간 실행되는 작업이 있으면 단일 스레드가 차단될 수 있음. 이를 해결하기 위해 JavaScript는 이벤트 루프를 사용하여 장시간 실행되는 작업을 백그라운드에서 처리하고 완료되면 메인 스레드로 다시 가져와 비동기적으로 처리함.
 
-//// The Javascript Engine and Runtime --------------------------------------------
+//// The Javascript Engine and Runtime ----------------------------------------------------------------------
 
 /// JS Engine :  Program that executes the JavaScript code
 
@@ -3256,4 +3256,18 @@ btnNew.addEventListener(`click`, init);
 // Web APIs include DOM, Timers, Fetch API etc. These are not part of the JavaScript language itself, but are provided by the environment (like browsers) in which JavaScript runs. They allow JavaScript to perform tasks that are not natively supported by the language, such as manipulating the DOM, making network requests, and handling user events.
 // Callback queue is a queue of callback functions that are waiting to be executed. When an asynchronous operation is completed, its callback function is added to the callback queue. The event loop continuously checks the call stack and the callback queue, and if the call stack is empty, it takes the first callback from the queue and pushes it onto the call stack for execution. (click, timer, data etc)
 
-//// Execution Contexts and The Call Stack  --------------------------------------------
+//// Execution Contexts and The Call Stack  ----------------------------------------------------------------------
+
+/// Execution Context : Environment in which a piece of JavaScript is executed. Stores all the necessary information for some code to be executed.
+// Exactly one global execution context (EC) : Default context, created for code that is not inside any function (top-level)
+// One execution context per function : For each function call, a new execution context is created.
+
+/// Execution Context In Detail
+// 1. Variable Environment : Where all the variables, functions and parameters are stored. This is where the JavaScript engine looks for variable values when they are accessed in the code.
+// - let, const, and var declarations
+// - Functions
+// - arguments object
+// 2. Scope Chain : A mechanism that allows the JavaScript engine to resolve variable names in nested functions. It consists of the current execution context's variable environment and the variable environments of all its parent execution contexts.
+// 3. this keyword
+// (Generated during `creation phase,` right before execution)
+/// Call Stack : A data structure that keeps track of the execution contexts in a LIFO (Last In First Out) order. When a function is called, its execution context is pushed onto the call stack, and when the function finishes executing, its execution context is popped off the stack.
