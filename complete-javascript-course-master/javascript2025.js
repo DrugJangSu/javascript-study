@@ -3271,3 +3271,6 @@ btnNew.addEventListener(`click`, init);
 // 3. this keyword
 // (Generated during `creation phase,` right before execution)
 /// Call Stack : A data structure that keeps track of the execution contexts in a LIFO (Last In First Out) order. When a function is called, its execution context is pushed onto the call stack, and when the function finishes executing, its execution context is popped off the stack.
+// - "place" where execution contexts get stacked on top of each other, to keep track of where we are in the execution.
+
+//// Scope and The Scope Chain
