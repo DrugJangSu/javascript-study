@@ -3285,12 +3285,17 @@ btnNew.addEventListener(`click`, init);
 
 // 스코프는 변수가 선언된 특정 공간이나 환경을 의미하며, Javascript에서는 세 가지로 구분할 수 있음.
 
+/// The 3 Types of Scoep;
 // Global Scope (전역 스코프)
+// - Outside of any function or block
+// - Variables declared in global scope are accessible everywhere
 // - 함수나 블록 외부에서 선언된 변수는 전역 스코프에 속한다.
 // - 페이지 전체에서 접근할 수 있으며, 중복된 변수 선언이 발생하면 덮어씌워짐.
 // - var, let, const 키워드로 선언된 변수 중 전역 스코프에 있는 경우 해당 변수는 페이지의 어느 곳에서든 접근할 수 있음.
 
 // Function Scope (함수 스코프)
+// - Variables are accessible only inside the function, not outside
+// - Also called as the "local scope"
 // - 함수 내부에서 선언된 변수는 해당 함수의 스코프에 속함.
 // - 함수 내부에서 선언된 변수는 해당 함수 외부에서는 접근할 수 없음.
 // - var 키워드로 선언된 변수는 함수 스코프에 속함.
