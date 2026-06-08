@@ -3301,6 +3301,9 @@ btnNew.addEventListener(`click`, init);
 // - var 키워드로 선언된 변수는 함수 스코프에 속함.
 
 // Block Scope (블록 스코프)
+// - Variables are accessible only inside the block, not outside (block scoped)
+// - However, this only applies to let and const variables
+// - Functions are also block scoped (only in strict mode)
 // - 블록 ( {} ) 내부에서 선언된 변수는 해당 블록의 스코프에 속함.
 // - let 과 const 키워드로 선언된 변수는 블록 스코프에 해당됨.
 // - for 문이나 if 문 내부에서 선언된 변수는 해당 블록 외부에서는 접근 불가.
@@ -3308,3 +3311,46 @@ btnNew.addEventListener(`click`, init);
 /// Scope Chain (스코프 체인)
 // 스코프 체인은 JavaScript 엔진이 변수를 해결할 때 사용하는 메커니즘으로, 현재 실행 컨텍스트의 변수 환경에서 변수를 찾지 못하면 부모 실행 컨텍스트의 변수 환경으로 이동하여 다시 검색하는 체인 구조를 통해 변수에 접근할 수 있음.
 // 예로 들어 함수 내부에서 선언된 변수는 해당 함수의 스코프에 있지만, 그 함수 내부에 또 다른 함수가 있을 때, 그 안에서 선언된 변수는 해당 내부 함수의 스코프에 있음. 이때 내부 함수에서 부모 함수의 변수를 접근하려면 스코프 체인이 동작하여 부모 함수의 변수 환경을 찾아가게 됨.
+
+// EXAMPLE ----------------------------------
+/*
+const myName = `Jonas`;      
+
+function first() {
+  const age = 30;     
+
+  if (age >= 30) {
+    //true
+    const decade = 3;
+    var millenial = true;
+  }
+
+  function second() {
+    const job = `teacher`;    
+    console.log(`${myName} is a ${age}-old ${job}}`);
+  }
+
+  second();
+}
+
+first();
+*/
+//  ----------------------------------
+// Global Scope (전역 스코프)
+// - myName 변수가 정의되어 있음.
+// - myName = "Jonas"라는 선언이 있음
+
+// first() 함수의 스코프
+// - age = 30 이라는 변수가 정의됨.
+// - if (age >= 30) 조건문 안에서 decade = 3; 과 millenial = true; 라는 변수가 정의됨.
+
+// second() 함수의 스코프
+// - job = `teacher`라는 변수가 정의됨.
+// - console.log(${myName} is a ${age}-old ${job}); 라는 코드가 실행되며, 여기서 myName, age, job이 필요함.
+
+// Scope Chain은 함수 내에서 변수를 찾을 때, 현재 스코프를 먼저 검색하고, 그 다음으로 외부 스코프를 검색한다. 이 경우 second() 함수는 first () 함수의 스코프를 먼저 검색하고, 그 다음으로 전역 스코프를 검색한다.
+
+// 따라서 second() 함수에서 다음과 같이 myName, age, job을 찾을 수 있음;
+// - myName = `Jonas`는 전역 스코프에서
+// - age = 30은 first() 함수의 스코프에서
+// - job = `teacher`는 second() 함수의 스코프에서
