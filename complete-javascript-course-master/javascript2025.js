@@ -3282,7 +3282,9 @@ btnNew.addEventListener(`click`, init);
 // 문법적 스코핑 :  JavaScript는 문법적 스코핑(Lexical scoping)를 사용하며, 이는 함수나 블록 내에서 변수가 정의되는 위치에 따라 그 접근 가능한 범위가 결정됨.
 
 // Scope : Space or environment in which a certain variable is declared (variable environment in case of functions). There is global scope, function scope, and block scope;
+
 // 스코프는 변수가 선언된 특정 공간이나 환경을 의미하며, Javascript에서는 세 가지로 구분할 수 있음.
+
 // Global Scope (전역 스코프)
 // - 함수나 블록 외부에서 선언된 변수는 전역 스코프에 속한다.
 // - 페이지 전체에서 접근할 수 있으며, 중복된 변수 선언이 발생하면 덮어씌워짐.
