@@ -3381,3 +3381,5 @@ first();
 // - The scope chain is a one-way street; a scope will never ever have access to the variables of an inner scope;
 // - The scope chain in a certain scope is equal to adding together all the variable environments of the all parent scopes;
 // - The scope chain has nothing to do with the order in which functions were called. It does not affect the scope chain at all.
+
+//// Scoping in Practice
