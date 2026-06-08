@@ -3274,3 +3274,30 @@ btnNew.addEventListener(`click`, init);
 // - "place" where execution contexts get stacked on top of each other, to keep track of where we are in the execution.
 
 //// Scope and The Scope Chain
+/// Scoping and Scope in JavaScript : Concepts
+// Scoping : How our program's variables are organized and accessed. "Where do veariables live?" or "Where can we access a certain variable, and where not?"
+// 스코핑 : 스코핑은 프로그램 내의 변수가 어떻게 정의되고, 어디서 접근할 수 있는지를 결정하는 개념이다.
+
+// Lexical scoping : Scoping is controlled by placement of functions and blocks in the code;
+// 문법적 스코핑 :  JavaScript는 문법적 스코핑(Lexical scoping)를 사용하며, 이는 함수나 블록 내에서 변수가 정의되는 위치에 따라 그 접근 가능한 범위가 결정됨.
+
+// Scope : Space or environment in which a certain variable is declared (variable environment in case of functions). There is global scope, function scope, and block scope;
+// 스코프는 변수가 선언된 특정 공간이나 환경을 의미하며, Javascript에서는 세 가지로 구분할 수 있음.
+// Global Scope (전역 스코프)
+// - 함수나 블록 외부에서 선언된 변수는 전역 스코프에 속한다.
+// - 페이지 전체에서 접근할 수 있으며, 중복된 변수 선언이 발생하면 덮어씌워짐.
+// - var, let, const 키워드로 선언된 변수 중 전역 스코프에 있는 경우 해당 변수는 페이지의 어느 곳에서든 접근할 수 있음.
+
+// Function Scope (함수 스코프)
+// - 함수 내부에서 선언된 변수는 해당 함수의 스코프에 속함.
+// - 함수 내부에서 선언된 변수는 해당 함수 외부에서는 접근할 수 없음.
+// - var 키워드로 선언된 변수는 함수 스코프에 속함.
+
+// Block Scope (블록 스코프)
+// - 블록 ( {} ) 내부에서 선언된 변수는 해당 블록의 스코프에 속함.
+// - let 과 const 키워드로 선언된 변수는 블록 스코프에 해당됨.
+// - for 문이나 if 문 내부에서 선언된 변수는 해당 블록 외부에서는 접근 불가.
+
+/// Scope Chain (스코프 체인)
+// 스코프 체인은 JavaScript 엔진이 변수를 해결할 때 사용하는 메커니즘으로, 현재 실행 컨텍스트의 변수 환경에서 변수를 찾지 못하면 부모 실행 컨텍스트의 변수 환경으로 이동하여 다시 검색하는 체인 구조를 통해 변수에 접근할 수 있음.
+// 예로 들어 함수 내부에서 선언된 변수는 해당 함수의 스코프에 있지만, 그 함수 내부에 또 다른 함수가 있을 때, 그 안에서 선언된 변수는 해당 내부 함수의 스코프에 있음. 이때 내부 함수에서 부모 함수의 변수를 접근하려면 스코프 체인이 동작하여 부모 함수의 변수 환경을 찾아가게 됨.
