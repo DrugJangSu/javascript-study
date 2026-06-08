@@ -3370,3 +3370,14 @@ first();
 // - 스코프 체인은 변수와 함수에 대한 접근성을 결정 VS 콜스택은 함수 호출의 순서를 추적하고 관리
 // - 스코프 체인은 현재 실행 컨텍스트에서 변수를 찾지 못할 때 부모 실행 컨텍스트의 스코프로 순차적으로 검색함 VS 콜 스택은 함수 호출이 발생할 때마다 새로운 실행 컨텍스트를 생성하고, 해당 컨텍스트를 스택에 쌓고 함수가 완료되면 해당 컨텍스트를 스택에서 제거함.
 // - 스코프 체인은 연결 리스트 형태로, 현재 실행 컨텍스트에서 부모 실행 컨텍스트를 가리키는 링크가 연결됨 VS 콜 스택은 LIFO(Last In First Out) 형태의 스택으로 가장 최근에 호출된 함수가 가장 위로 위치함.
+
+/// SUMMARY
+// - Scoping asks the question "Where do variables live?" or "Where can we access a certain variable, and where not?"
+// - There are 3 types of scope in JavaScript : The global scope, scopes defined by functions, and scopes defined by blocks;
+// - Only let and const variables are block-scoped. Variables declared with var end up in ther closest function scope;
+// - In JavaScript we have lexical scoping, so the rules of where we can access variables are based on exactly where in the code functions and blocks are written;
+// - Every scope always has access to all the variables from all its outer scopes. This is the scope chain.
+// - When a variable is not in the current scope, the engine looks up in the scope chain until it finds the varaible it's looking for. This is called "variable lookup";
+// - The scope chain is a one-way street; a scope will never ever have access to the variables of an inner scope;
+// - The scope chain in a certain scope is equal to adding together all the variable environments of the all parent scopes;
+// - The scope chain has nothing to do with the order in which functions were called. It does not affect the scope chain at all.
