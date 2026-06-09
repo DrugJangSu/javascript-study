@@ -3488,4 +3488,28 @@ calcAge(1991);
 // printAge(); // The same as this one.
 
 // This is the reason why it's okay to have many functions with the exact same parameter names, in the same way it's not a problem to have functions wit the same variable names inside of them.
+
+
+
+/// 방금 알게 된 내용 단순 정리;
+const firstName = 'Steven'
+✅ JS는 변수를 찾을 때 현재 스코프 먼저 찾고, 없으면 바깥으로 올라감. if 블록 안에 firstName이 있으니까 Jonas 대신 Steven이 출력됨.
+
+output = 'NEW OUTPUT!'
+✅ output은 const가 아니라 let이라서 재할당 가능함. 내부 스코프에서 바깥 스코프 변수를 재할당하는 것.
+
+const output = 'NEW OUTPUT!'
+✅ 바깥 output을 건드리는 게 아니라 같은 이름의 새 변수를 만든 거예요. 그래서 바깥 output은 그대로예요.
+
+console.log(str) 에러
+✅ const, let은 블록 스코프라 if {} 밖에서 접근 불가.
+
+console.log(millenial) 작동
+✅ var는 블록 스코프를 무시하고 함수 스코프로 올라감. if {} 안에서 선언해도 printAge 함수 전체에서 접근 가능함
+
+console.log(add(2, 3)) strict mode에서 에러
+✅ strict mode에서는 함수 선언도 블록 스코프로 취급됨. if {} 밖에서 add 접근 불가.
+
+마지막 주석들 (age, printAge 접근 불가)
+✅ Scope Chain은 단방향이라 바깥에서 안쪽 변수/함수에 접근 못함.
  */
