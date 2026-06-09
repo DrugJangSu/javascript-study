@@ -3513,3 +3513,5 @@ console.log(add(2, 3)) strict mode에서 에러
 마지막 주석들 (age, printAge 접근 불가)
 ✅ Scope Chain은 단방향이라 바깥에서 안쪽 변수/함수에 접근 못함.
  */
+
+//// Variable Environment : Hoisting and The TDZ
