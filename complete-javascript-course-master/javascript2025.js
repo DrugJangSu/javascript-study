@@ -3499,7 +3499,7 @@ output = 'NEW OUTPUT!'
 ✅ output은 const가 아니라 let이라서 재할당 가능함. 내부 스코프에서 바깥 스코프 변수를 재할당하는 것.
 
 const output = 'NEW OUTPUT!'
-✅ 바깥 output을 건드리는 게 아니라 같은 이름의 새 변수를 만든 거예요. 그래서 바깥 output은 그대로예요.
+✅ 바깥 output을 건드리는 게 아니라 같은 이름의 새 변수를 만든 것. 그러므로 바깥 output은 그대로임.
 
 console.log(str) 에러
 ✅ const, let은 블록 스코프라 if {} 밖에서 접근 불가.
