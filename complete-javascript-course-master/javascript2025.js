@@ -3382,4 +3382,70 @@ first();
 // - The scope chain in a certain scope is equal to adding together all the variable environments of the all parent scopes;
 // - The scope chain has nothing to do with the order in which functions were called. It does not affect the scope chain at all.
 
+//// 나만의 요약
+/*
+Scoping 요약 정리
+
+1. Scoping이란?
+"변수가 어디에 존재하는가?" "어디서 접근 가능하고, 어디서 불가능한가?"를 결정하는 규칙.
+
+2. JS의 3가지 Scope
+Global Scope → 함수 밖에 선언된 변수. 어디서든 접근 가능
+Function Scope → 함수 안에 선언된 변수. 그 함수 안에서만 접근 가능
+Block Scope → {} 안에 선언된 변수. let, const만 해당
+
+const a = 1;        // Global scope
+
+function fn() {
+  const b = 2;      // Function scope
+  
+  if (true) {
+    const c = 3;    // Block scope - let/const만
+    var d = 4;      // var는 블록 무시 → function scope로 올라감
+  }
+  console.log(d);   // ✅ var는 접근 가능
+  console.log(c);   // ❌ const는 블록 밖에서 접근 불가
+}
+
+
+3. Lexical Scoping
+Scope는 함수가 호출된 위치가 아니라 작성된 위치로 결정됨.
+
+const a = 1;
+
+function outer() {
+  const b = 2;
+  function inner() {
+    console.log(a); // ✅ 작성 위치 기준으로 바깥인 Global 접근 가능
+    console.log(b); // ✅ 작성 위치 기준으로 바깥인 outer 접근 가능
+  }
+}
+
+
+4. Scope Chain
+모든 scope는 바깥 scope의 변수에 접근 가능함.
+inner → outer → Global
+
+
+5. Scope Chain은 단방향
+바깥 → 안쪽은 절대 안됨.
+javascriptfunction outer() {
+  function inner() {
+    const c = 3;
+  }
+  console.log(c); // ❌ outer는 inner 안을 못 봄
+}
+
+6. Scope Chain과 Call Stack은 무관
+Scope Chain은 코드 작성 위치로만 결정되며, 함수가 어떤 순서로 호출됐는지는 전혀 상관없음
+
+전체 한 줄 요약
+Scoping - 변수 접근 가능 범위 규칙
+Lexical Scoping - 작성 위치가 기준
+Scope Chain - 안에서 바깥으로 변수 탐색
+Variable Lookup - 없으면 바깥으로 올라가며 찾기
+단방향 - 바깥 -> 안쪽 접근 불가
+
+
+*/
 //// Scoping in Practice
