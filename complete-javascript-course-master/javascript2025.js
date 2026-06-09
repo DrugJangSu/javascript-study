@@ -3491,7 +3491,7 @@ calcAge(1991);
 
 
 
-/// 방금 알게 된 내용 단순 정리;
+/// 방금 강의내용 요약 정리;
 const firstName = 'Steven'
 ✅ JS는 변수를 찾을 때 현재 스코프 먼저 찾고, 없으면 바깥으로 올라감. if 블록 안에 firstName이 있으니까 Jonas 대신 Steven이 출력됨.
 
