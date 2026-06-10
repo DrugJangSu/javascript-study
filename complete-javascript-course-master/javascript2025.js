@@ -3514,4 +3514,11 @@ console.log(add(2, 3)) strict mode에서 에러
 ✅ Scope Chain은 단방향이라 바깥에서 안쪽 변수/함수에 접근 못함.
  */
 
-//// Variable Environment : Hoisting and The TDZ
+//// Variable Environment : Hoisting and The TDZ -----------------------------
+
+/// Hoisting in JavaScript
+// Hoisting : Makes some types of variables accessible/usable in the code before they are actually declared. "Variables lifed to the top of their scope."
+// - Before execution, code is scanned for variable declarations, and for each variable, a new property is created in the variable environment object.
+// function delclarations - HOISTED? YES /  INITIAL VALUE - Actual function / SCOPE - Block
+// var variables - HOISTED? YES / INITIAL VALUE - undefined / SCOPE - Function
+// let and const variables - HOISTED? NO / INITIAL VALUE - <uninitialized>, TDZ / SCOPE - Block
