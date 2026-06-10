@@ -3515,22 +3515,63 @@ console.log(add(2, 3)) strict mode에서 에러
  */
 
 //// Variable Environment : Hoisting and The TDZ -----------------------------
-
+/*
 /// Hoisting in JavaScript
 // Hoisting : Makes some types of variables accessible/usable in the code before they are actually declared. "Variables lifed to the top of their scope."
 // Hoisting은 JavaScript에서 변수나 함수를 선언하기 전에 코드에서 사용할 수 있도록 하는 기능.
 // - 코드가 실행되기 전에 JS가 먼저 변수/함수 선언을 쭉 훑어보고 Variable Environment에 등록해두는 것. 그래서 선언보다 위에서 사용이 가능해지는 것처럼 보임.
 // - Before execution, code is scanned for variable declarations, and for each variable, a new property is created in the variable environment object.
 // function delclarations -> HOISTED? YES /  INITIAL VALUE - Actual function / SCOPE - Block
-// 예시)
+// 함수 선언 : 함수 선언은 코드의 시작 부분에서부터 사용 가능하게 만듦.
+// 예시) -------
 // 선언 전에 호출해도 작동
 greet(); // ✅ "Hello"
 
 function greet() {
   console.log("Hello");
 }
-// - 호이스팅 됨 + 실제 함수 통째로 등록됨. 그래서 선언 전에 쓰는 것이 가능.
+//---------------
 
+// - 호이스팅 됨 + 실제 함수 통째로 등록됨. 그래서 선언 전에 쓰는 것이 가능.
+//
+//
 // var variables -> HOISTED? YES / INITIAL VALUE - undefined / SCOPE - Function
+// var 변수 선언 : var로 선언된 변수는 코드의 시작 부분에서부터 사용 가능하게 만듦.
+// 예시) --------
+console.log(x); // undefined (에러 아님!)
+var x = 10;
+console.log(x); // 10
+//---------------
+// - 호이스팅은 되는데 값은 undefined로 등록됨. 선언 전에 쓰면 에러는 안나지만 undefined가 나와서 버그 찾기가 힘듦. (고로 실질적으로는 안 쓰는 편)
+//
+//
 // let and const variables -> HOISTED? NO / INITIAL VALUE - <uninitialized>, TDZ / SCOPE - Block
+// let & const 변수 선언 : let나 const로 선언된 변수는 위와 다르게 불가능함. 이 경우 코드가 실행되기 전에 변수를 선언하지 않으면 에러가 발생함.
+// 예시) --------
+console.log(x); // ❌ ReferenceError
+const x = 10;
+//---------------
+
+// - 기술적으로 호이스팅이 되긴 하나 TDZ(Temporal Dead Zone) 때문에 선언 전에 접근하면 에러가 남.
+// TDZ : 변수가 선언된 줄에 도달하기 전까지 접근 금지 구간
+// 예시) --------
+코드 시작
+     ↕  ← TDZ (접근하면 에러)
+const x = 10;  ← 여기서부터 접근 가능
+//---------------
+// - var처럼 undefined로 넘어가는 것보다 에러를 바로 터트려줘서 오히려 버그 찾기가 쉬움
+
 // function expressions and arrows -> Depends if using var or let / const
+// 예시) ---------
+// var로 선언하면
+console.log(add); // undefined
+var add = function(a, b) { return a + b; }
+
+// const/let으로 선언하면
+console.log(add); // ❌ ReferenceError
+const add = function(a, b) { return a + b; }
+//---------------
+// - 함수가 아니라 변수로 취급됨. 그래서 var / let / const 규칙을 그대로 따름.
+
+
+*/
