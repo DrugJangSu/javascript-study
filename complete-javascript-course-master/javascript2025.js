@@ -3518,7 +3518,19 @@ console.log(add(2, 3)) strict mode에서 에러
 
 /// Hoisting in JavaScript
 // Hoisting : Makes some types of variables accessible/usable in the code before they are actually declared. "Variables lifed to the top of their scope."
+// Hoisting은 JavaScript에서 변수나 함수를 선언하기 전에 코드에서 사용할 수 있도록 하는 기능.
+// - 코드가 실행되기 전에 JS가 먼저 변수/함수 선언을 쭉 훑어보고 Variable Environment에 등록해두는 것. 그래서 선언보다 위에서 사용이 가능해지는 것처럼 보임.
 // - Before execution, code is scanned for variable declarations, and for each variable, a new property is created in the variable environment object.
-// function delclarations - HOISTED? YES /  INITIAL VALUE - Actual function / SCOPE - Block
-// var variables - HOISTED? YES / INITIAL VALUE - undefined / SCOPE - Function
-// let and const variables - HOISTED? NO / INITIAL VALUE - <uninitialized>, TDZ / SCOPE - Block
+// function delclarations -> HOISTED? YES /  INITIAL VALUE - Actual function / SCOPE - Block
+// 예시)
+// 선언 전에 호출해도 작동
+greet(); // ✅ "Hello"
+
+function greet() {
+  console.log("Hello");
+}
+// - 호이스팅 됨 + 실제 함수 통째로 등록됨. 그래서 선언 전에 쓰는 것이 가능.
+
+// var variables -> HOISTED? YES / INITIAL VALUE - undefined / SCOPE - Function
+// let and const variables -> HOISTED? NO / INITIAL VALUE - <uninitialized>, TDZ / SCOPE - Block
+// function expressions and arrows -> Depends if using var or let / const
