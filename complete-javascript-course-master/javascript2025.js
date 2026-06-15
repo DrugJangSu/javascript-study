@@ -3573,5 +3573,4 @@ const add = function(a, b) { return a + b; }
 //---------------
 // - 함수가 아니라 변수로 취급됨. 그래서 var / let / const 규칙을 그대로 따름.
 
-
 */
