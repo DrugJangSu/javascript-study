@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 function calcAge(birthYear) {
   const age = 2037 - birthYear;
   function printAge() {
@@ -36,3 +36,13 @@ calcAge(1991);
 // printAge(); // The same as this one.
 
 // This is the reason why it's okay to have many functions with the exact same parameter names, in the same way it's not a problem to have functions wit the same variable names inside of them.
+*/
+console.log(me);
+// console.log(job);
+// console.log(year);
+
+var me = `Jonas`;
+let job = `teacher`;
+const year = 1991;
+
+// Functions
