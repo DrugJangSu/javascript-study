@@ -3641,3 +3641,5 @@ console.log(z === window.z);
 // - new, call, apply, bind 👉 <later in the course>
 
 // <this does NOT point to the function itself, but also NOT the its variable environment!>
+
+//// The this Keyword in Practice ---------------------------------------
