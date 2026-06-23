@@ -3931,3 +3931,18 @@ console.log(`Clone`, jessicaClone);
 // How is memory freed up after we no longer need a value?
 // - CALL STACK -> Variable environment is simply deleted when EC pops off stack
 // - HEAP -> Garbage Collection (central memory management tool)
+
+// MARK-AND-SWEEP ALGORITHM
+// 1) MARK : Mark all objects that are reachable from a root as "alive" ("root" : starting point to search for alive objects)
+// 2) SWEEP : Delete un-marked (unreachable) objects and reclaim memory for future allocations
+/// Memory leak : When objects that are no longer needed are incorrectly still reachable, and therefore not being garbage collected
+
+/// "How JavaScript works behind the scenes" topics for later:
+// 1) Closures -> A Closer Look at Functions
+// 2) Prototypal Inheritance -> Object Oriented Programming (OOP) With JavaScript
+// 3) Event Loop -> Asynchronous JavaScript : Promises, Async/Await and AJAX
+// 4) How the DOM Really Works -> Advanced DOM and Events
+
+///// END OF SECTION 8 --------------------------------------------------------------------------------------------
+
+///// Section 9 : Data Structures, Modern Operators and Strings --------------------------------------------------------------------------------------------------------
