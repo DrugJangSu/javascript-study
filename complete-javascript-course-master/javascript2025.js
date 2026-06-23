@@ -3683,3 +3683,94 @@ f();
 
 */
 //// Regular Functions VS Arrow Functions ---------------------
+/*
+
+var firstName = `Matilda`;
+
+const jonas = {
+  firstName: `Jonas`,
+  year: 1991,
+  calcAge: function () {
+    // console.log(this);
+    console.log(2037 - this.year);
+
+    /// Solution 1
+    // const self = this; // self or that
+    // const isMillenial = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    //   // console.log(this.year >= 1981 && this.year <= 1996);
+    // };
+
+    /// Solution 2
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
+  },
+
+  greet: () => {
+    (console.log(this), console.log(`Hey ${this.firstName}`));
+  },
+};
+jonas.greet();
+// console.log(this.firstName);
+jonas.calcAge();
+
+/// 부연설명
+this 키워드
+- greet(화살표, 객체 안)  => 전역 window -> Matilda
+- calcAge (일반 메서드) => jonas 객체
+- isMillenial (화살표, calcAge 안) => calcAge의 this 상속 -> jonas
+
+// 즉 일반함수는 자신의 this, argument 가 존재하나 
+// 화살표 함수는 this는 바깥에서 가져오거나 argument 는 존재하지 않음
+
+
+/// Arguments keyword ---------
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+addExpr(2, 5);
+addExpr(2, 5, 8, 12);
+// this will still be working
+
+var addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+addArrow(2, 5, 8);
+// this will cause an error
+
+*/
+
+//// Memory Management : Primitives vs Objects ---------------------
+/// The Memory Lifecycle in JavaScript (자바스크립트의 메모리 생애주기) -------
+// "How and where are variables created in JavaScript?"
+// Unlike other languages, memory is automatically managed by JavaScriopt behind the scenes
+// Every value we create in JavaScript goes through a memory lifecycle
+
+// 1) Allocate Memory (메모리 할당)
+// - Whenever we assign a value to a new variable, the engine automatically allocates (reserves) a piece of memory to store the value
+// ex) let temp = 23.7
+// 변수를 선언하는 순간, JS 엔진이 자동으로 메모리 공간을 예약하고 값을 저장함. (C+언어는 반면에 개발자가 직접 메모리 할당 및 해제를 수시로 해야 됨 -> 그에 따른 메모리 누수 위험 높음)
+
+// 2) Use Memory (메모리 사용)
+// - While code is running, the value is written, read, and updated in the allocated piece of memory
+// ex) temp = temp + 5
+//     round(temp)
+// 코드가 실행되는 동안 값을 읽고 쓰고 수정하는 단계로, 일반적으로 코딩할 때 변수 쓰는 단계임.
+
+// 3) Release Memory
+// - When no longer needed, the value is deleted from memory to free up resources. The released memory is used for new values
+// ex) temp is removed from memory
+// 값이 더 이상 필요 없어지면 JS 엔진이 자동으로 메모리를 회수함. (Garbage Collector)
+
+/// Where is Memory Allocated? ------
+// Primitives : Number, String, Boolean, Undefined, Null, Symbol, BigInt
+// => These will be stored in the "Call Stack"
+
+// Objects : Object Literals, Arrays, Functions, etc
+// => These will be stored in the "Heap"
