@@ -1,3 +1,4 @@
+`use strict`;
 // This file is part of the JavaScript study exercises of a Udemy Course
 // The Complete Javascript Course 2025: From Zero to Expert!
 // console.log("Hello, JavaScript!");
@@ -1668,7 +1669,7 @@ console.log(percentages3);
 
 ///// Developer Skills & Editor Setup ////
 // Remember, we're gonna use strict mode in all scripts now!
-"use strict";
+("use strict");
 /*
 //// Setting up Prettier and VS Code, and installing extensions
 const x = 23;
@@ -3946,8 +3947,7 @@ console.log(`Clone`, jessicaClone);
 ///// END OF SECTION 8 --------------------------------------------------------------------------------------------
 
 ///// Section 9 : Data Structures, Modern Operators and Strings --------------------------------------------------------------------------------------------------------
-//// Destructuring Arrays
-`use strict`;
+//// Destructuring Arrays -------------------------------------------------------------------
 /*
 
 const restaurant = {
@@ -4011,7 +4011,7 @@ console.log(p, q, r);
 //
 
 */
-/// ASSIGNMENT
+/// ASSIGNMENT[Destructuring Arrays]
 const books = [
   {
     title: "Algorithms",
