@@ -171,3 +171,60 @@ var addArrow = (a, b) => {
 addArrow(2, 5, 8);
 // this will cause an error
 */
+
+//// Object References in Practice (Shallow vs. Deep Copies) -------------------
+/*
+const jessica1 = {
+  firstName: `Jessica`,
+  lastName: `Williams`,
+  age: 27,
+};
+
+function marryPerson(originalPerson, newLastName) {
+  originalPerson.lastName = newLastName;
+  return originalPerson;
+}
+
+const marriedJessica = marryPerson(jessica1, `Davis`);
+
+// const marriedJessica = jessica;
+// marriedJessica.lastName = `Davis`;
+
+console.log(`Before:`, jessica1);
+console.log(`After`, marriedJessica);
+// these two will have the same result, with the lastName both being "Davis" instead of the previous "Williams"
+
+const jessica = {
+  firstName: `Jessica`,
+  lastName: `Williams`,
+  age: 27,
+  family: [`Alice`, `Bob`],
+};
+
+/// Shallow Copy ----------
+const jessicaCopy = { ...jessica };
+// "..." this is the spread operator, which basically places all the properties into a brand new object
+jessicaCopy.lastName = `Davis`;
+
+console.log(jessica, jessicaCopy);
+
+// jessicaCopy.family.push(`Mary`);
+// jessicaCopy.family.push(`John`);
+
+// console.log(`Before:`, jessica);
+// console.log(`After`, jessicaCopy);
+// This will have the same result with 4 families in total.
+// it's because a nested object thus a heap, and will created an object reference.(it will copy directly from the array, and it will have the same family property as a result.)
+// and the first `...` only copied the first level of the object -> this is called as a "shallow copy"
+
+// Thus to achieve what we want to have as as result;
+/// Deep Copy/Clone ----------
+const jessicaClone = structuredClone(jessica);
+
+jessicaClone.family.push(`Mary`);
+jessicaClone.family.push(`John`);
+
+console.log(`Original:`, jessica);
+console.log(`Clone`, jessicaClone);
+// This will have the different results
+*/

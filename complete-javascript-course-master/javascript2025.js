@@ -3839,3 +3839,91 @@ function calcAge(birthYear) {
 // -> Call Stack에는 "Heap 주소(reference)"만 저장됨.
 // -> newLocation = location 처럼 할 시 같은 reference를 공유하게 됨
 // -> 같은 객체를 가리키고 있으므로 newLocation.city를 바꾸면 location.city도 함께 바뀜.
+
+/// 강의 정리
+/*
+Primitive
+----------------
+- Stack에 값이 직접 저장된다.
+- 복사하면 값 자체가 복사된다.
+- 서로 영향을 주지 않는다.
+
+Object
+----------------
+- 실제 데이터는 Heap에 저장된다.
+- Stack에는 Heap 주소(reference)만 저장된다.
+- 복사하면 객체가 아니라 reference가 복사된다.
+- 여러 변수가 하나의 객체를 함께 가리킬 수 있다.
+
+Function
+----------------
+- 함수도 Object이다.
+- 따라서 Heap에 저장된다.
+- 변수에는 함수의 reference가 저장된다.
+
+Memory Lifecycle
+----------------
+1. Allocate (메모리 할당)
+2. Use (사용)
+3. Release (Garbage Collector가 자동 회수)
+*/
+
+//// Object References in Practice (Shallow vs. Deep Copies) -------------------
+/*
+const jessica1 = {
+  firstName: `Jessica`,
+  lastName: `Williams`,
+  age: 27,
+};
+
+function marryPerson(originalPerson, newLastName) {
+  originalPerson.lastName = newLastName;
+  return originalPerson;
+}
+
+const marriedJessica = marryPerson(jessica1, `Davis`);
+
+// const marriedJessica = jessica;
+// marriedJessica.lastName = `Davis`;
+
+console.log(`Before:`, jessica1);
+console.log(`After`, marriedJessica);
+// these two will have the same result, with the lastName both being "Davis" instead of the previous "Williams"
+
+const jessica = {
+  firstName: `Jessica`,
+  lastName: `Williams`,
+  age: 27,
+  family: [`Alice`, `Bob`],
+};
+
+/// Shallow Copy ----------
+const jessicaCopy = { ...jessica };
+// "..." this is the spread operator, which basically places all the properties into a brand new object
+jessicaCopy.lastName = `Davis`;
+
+console.log(jessica, jessicaCopy);
+
+// jessicaCopy.family.push(`Mary`);
+// jessicaCopy.family.push(`John`);
+
+// console.log(`Before:`, jessica);
+// console.log(`After`, jessicaCopy);
+// This will have the same result with 4 families in total.
+// it's because a nested object thus a heap, and will created an object reference.(it will copy directly from the array, and it will have the same family property as a result.)
+// and the first `...` only copied the first level of the object -> this is called as a "shallow copy"
+
+// Thus to achieve what we want to have as as result;
+/// Deep Copy/Clone ----------
+const jessicaClone = structuredClone(jessica);
+
+jessicaClone.family.push(`Mary`);
+jessicaClone.family.push(`John`);
+
+console.log(`Original:`, jessica);
+console.log(`Clone`, jessicaClone);
+// This will have the different results
+*/
+
+//// Memory Management : Garbage Collection ----------------------------------------------
+//
