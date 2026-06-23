@@ -3770,7 +3770,72 @@ addArrow(2, 5, 8);
 
 /// Where is Memory Allocated? ------
 // Primitives : Number, String, Boolean, Undefined, Null, Symbol, BigInt
+// References to objects
 // => These will be stored in the "Call Stack"
 
 // Objects : Object Literals, Arrays, Functions, etc
 // => These will be stored in the "Heap"
+
+// 물론 세세하게 따지면 예외사항은 존재함.
+
+/// Understanding Object References -----
+
+// example)
+/*
+const name = `Jonas`;
+const age = calcAge(1991);
+let newAge = age;
+newAge++;
+
+const location = {
+  city: `Faro`,
+  country: `Portugal`,
+};
+
+const newLocation = location;
+newLocation.city = `Lisbon`;
+
+console.log(location);
+
+function calcAge(birthYear) {
+  const now = 2037;
+  const x = now - birthYear;
+  return x;
+}
+*/
+
+// CALLSTACK has the following;
+
+// <calcAge() EC> -----
+// - now = 2037
+// - x = 46
+
+// <global EC> ----
+// - name = "Jonas"
+// - age = 46
+// - newAge = 47 (newAge++ 때문)
+// - location = (#1 HEAP으로부터 reference를 통해서 가져옴)
+// - newLocation = (reference를 카피해서 가져옴. 위 location과 동일.)
+// - calcAge = (#2 HEAP으로부터 reference 가져옴)
+
+// HEAP has the following;
+// #1)
+// city = "Faro" -> "Lisbon" (기존 location object를 변경)
+// country = "Portugal"
+
+// #2)
+// function calcAge(birthYEar) {
+//   const now = 2037;
+//   const x = now - birthYEar;
+//   return x;
+// }
+
+/// 개인정리용
+/// Primitive - 값 자체를 복사함
+// -> 위 내용처럼 Call Stack 값 자체에 저장되기 때문에 복사하면 완전히 다른 별개의 값이 생김.
+// -> newAge를 바꿔도 age는 영향이 없음.
+
+/// Object - reference(참조)를 복사
+// -> Call Stack에는 "Heap 주소(reference)"만 저장됨.
+// -> newLocation = location 처럼 할 시 같은 reference를 공유하게 됨
+// -> 같은 객체를 가리키고 있으므로 newLocation.city를 바꾸면 location.city도 함께 바뀜.
