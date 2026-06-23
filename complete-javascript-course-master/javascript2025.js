@@ -3926,4 +3926,8 @@ console.log(`Clone`, jessicaClone);
 */
 
 //// Memory Management : Garbage Collection ----------------------------------------------
-//
+
+/// Garbage Collection
+// How is memory freed up after we no longer need a value?
+// - CALL STACK -> Variable environment is simply deleted when EC pops off stack
+// - HEAP -> Garbage Collection (central memory management tool)
