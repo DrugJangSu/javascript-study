@@ -5029,7 +5029,7 @@ const restaurantCopy = { ...restaurant };
 restaurantCopy.name = 'Ristorante Roma';
 
 console.log(restaurantCopy.name); // 'Ristorante Roma'
-console.log(restaurant.name);     // 'Classico Italiano' (원본 유지!)
+console.log(restaurant.name);     // 'Classico Italiano' (원본 유지)
 
 
 */
