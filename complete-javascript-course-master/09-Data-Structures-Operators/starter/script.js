@@ -55,8 +55,14 @@ const restaurant = {
     time = `20:00`,
     address,
   }) {
+    // console.log(
+    //   `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`,
+    // );
+  },
+
+  orderPasta: function (ing1, ing2, ing3) {
     console.log(
-      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`,
+      `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`,
     );
   },
 };
@@ -75,18 +81,18 @@ restaurant.orderDelivery({
 });
 
 const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
+// console.log(name, openingHours, categories);
 
 const {
   name: restaurantName,
   openingHours: hours,
   categories: tags,
 } = restaurant;
-console.log(restaurantName, hours, tags);
+// console.log(restaurantName, hours, tags);
 
 // Default values
-const { menu = [], starterMenu: starters = [] } = restaurant;
-console.log(menu, starters);
+// const { menu = [], starterMenu: starters = [] } = restaurant;
+// console.log(menu, starters);
 
 // Mutating variables
 let a = 111;
@@ -94,13 +100,13 @@ let b = 999;
 const obj = { a: 23, b: 7, c: 14 };
 
 ({ a, b } = obj);
-console.log(a, b);
+// console.log(a, b);
 
 // nested objects
 const {
   fri: { open: o, close: c },
 } = openingHours;
-console.log(o, c);
+// console.log(o, c);
 
 //
 
@@ -429,3 +435,53 @@ function printBookInfo(title, author, year) {
 //
 //
 */
+
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+console.log(1, 2, 7, 8, 9);
+
+const newMenu = [...restaurant.mainMenu, `Gnocci`, `Pesto Pasta`];
+console.log(newMenu);
+
+// Copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+// Join 2 arrays
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+console.log(menu);
+
+// Iterables : arrays, strings, maps, sets. Not objects
+const str = `Jonas`;
+const letters = [...str, ` `, `s.`];
+console.log(letters);
+console.log(...str);
+console.log(`J`, `o`, `n`, `a`, `s`);
+// console.log(`${...str} Schmedtmann`); // This will throw an error because template literals do not support spread syntax directly
+
+const ingredients = [
+  // prompt(`Let\'s make pasta! Ingredient 1?`),
+  // prompt(`Ingredient 2?`),
+  // prompt(`Ingredient 3?`),
+];
+console.log(ingredients);
+
+restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+restaurant.orderPasta(...ingredients);
+
+// Objects
+const newRestaurant = {
+  foundedIn: 1998,
+  ...restaurant,
+  founder: `Guiseppe`,
+};
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = `Ristorante Roma`;
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
