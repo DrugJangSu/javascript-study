@@ -4731,3 +4731,4 @@ console.log(restaurant.name);
 
 
 */
+//// Rest Pattern and Parameters --------------------
