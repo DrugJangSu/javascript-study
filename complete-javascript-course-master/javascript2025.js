@@ -4970,4 +4970,67 @@ function spellWord(word) {
   console.log(...word);
 }
 */
+/*
+/// 내용 일부 설명
+// Spread Operator(스프레드 연산자)는 배열/객체/문자열을 "펼쳐서" 개별 요소를 분리해주는 연산자임.
+// 원리는 "안에 들어있는 것들을 하나씩 꺼내기"
+// 스프레드 연산자는 배열이나 객체의 요소를 개별적으로 분리하여 새로운 배열이나 객체를 만들거나, 함수의 인자로 전달할 때 유용하게 사용됨.
+// 예) [1, 2, ...arr] => arr의 요소가 1,2 뒤에 추가됨.
+/// 기본 원리;
+const arr = [7, 8, 9]
+
+// 옛날 방식
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+// spread 사용 방식
+const badNewArr = [1, 2, ...arr];
+
+/// 배열 활용
+// 새 요소 추가;
+const newMenu = [...restaurant.mainMenu, 'Gnocci', 'Pesto Pasta'];
+// ['Pizza', 'Pasta', 'Risotto', 'Gnocci', 'Pesto Pasta']
+
+// 배열 복사(shallow copy);
+const mainMenuCopy = [...restaurant.mainMenu];
+// 원본에 영향 없이 복사본 생성
+
+// 두 배열 합치기;
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad', 'Pizza', 'Pasta', 'Risotto']
+
+/// 문자열도 가능함
+const str = 'Jonas';
+const letters = [...str, ' ', 's.'];
+// ['J', 'o', 'n', 'a', 's', ' ', 's.']
+
+console.log(...str);
+// J o n a s  (개별 문자로 펼쳐짐)
+
+// 단, template literals에서는 spread operator를 직접 사용할 수 없음
+console.log(`${...str} Schmedtmann`); => 에러.
+
+
+/// 함수 인자 활용
+// 원래 방식
+restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+
+// spread 사용
+restaurant.orderPasta(...ingredients);
+
+/// 객체에도 사용 가능
+// 기존 객체 속성을 펼쳐서 새 객체 생성
+const newRestaurant = {
+  foundedIn: 1998,
+  ...restaurant,      // restaurant의 모든 속성 복사
+  founder: 'Guiseppe'
+};
+
+/// 객체 복사 + 독립적으로 수정;
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Roma';
+
+console.log(restaurantCopy.name); // 'Ristorante Roma'
+console.log(restaurant.name);     // 'Classico Italiano' (원본 유지!)
+
+
+*/
 //// Rest Pattern and Parameters --------------------
