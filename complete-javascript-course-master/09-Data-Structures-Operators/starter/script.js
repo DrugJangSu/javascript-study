@@ -493,6 +493,7 @@ console.log(restaurant.name);
 */
 //
 //// Rest Pattern and Parameters -------------------
+/*
 // SPREAD, because on RIGHT side of =
 const arr = [1, 2, ...[3, 4]];
 
@@ -526,3 +527,13 @@ add(...x);
 
 restaurant.orderPizza(`mushrooms`, `onion`, `olives`, `spinach`);
 restaurant.orderPizza(`mushrooms`);
+*/
+//
+
+//// Short Circuiting (&& and ||) --------------------
+// Use ANY data type, return ANY data type, short-circuiting
+console.log(3 || `Jonas`); // 3
+console.log(`` || `Jonas`); // Jonas
+console.log(true || 0); // true
+console.log(undefined || null); // null
+console.log(undefined || 0 || `` || `Hello` || 23 || null); // Hello
