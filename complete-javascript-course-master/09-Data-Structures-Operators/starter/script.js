@@ -531,6 +531,7 @@ restaurant.orderPizza(`mushrooms`);
 //
 
 //// Short Circuiting (&& and ||) --------------------
+/*
 // Use ANY data type, return ANY data type, short-circuiting
 console.log(3 || `Jonas`); // 3
 console.log(`` || `Jonas`); // Jonas
@@ -556,3 +557,4 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+*/
