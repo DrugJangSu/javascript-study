@@ -581,4 +581,13 @@ const rest2 = {
   owner: `Giovanni Rossi`,
 };
 
-rest2.numberGuests ?? = rest1.numGuests || 10;
+/// OR assignment operator
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+
+rest1.numGuests ||= 10;
+rest2.numGuests ||= 10;
+
+// These two have the same effect as the above code
+
+console.log(rest1, rest2);
