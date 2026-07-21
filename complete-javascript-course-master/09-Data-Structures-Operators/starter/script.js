@@ -571,3 +571,14 @@ console.log(guestCorrect);
 */
 
 //// Logical Assignment Operators -----------------------
+const rest1 = {
+  name: `Capri`,
+  numGuests: 20,
+};
+
+const rest2 = {
+  name: `La Piazza`,
+  owner: `Giovanni Rossi`,
+};
+
+rest2.numberGuests ?? = rest1.numGuests || 10;
