@@ -629,7 +629,7 @@ Here are the tasks;
 
 TEST DATA FOR 6 : Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Then, call the function again with players from game.scored
 
-*/
+
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borussia Dortmund',
@@ -706,4 +706,8 @@ printGoals(...game.scored);
 team1 < team2 && console.log(`Team 1 is more likely to win`);
 team1 > team2 && console.log(`Team 2 is more likely to win`);
 
+*/
 //// Looping Arrays : The for-of Loop -----------------------
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menu) console.log(item);
