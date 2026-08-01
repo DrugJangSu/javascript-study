@@ -23,16 +23,18 @@ const mexicanFoods = new Set([
 ]);
 
 // Data needed for first part of the section
+
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 const openingHours = {
-  thu: {
+  [weekdays[3]]: {
     open: 12,
     close: 22,
   },
-  fri: {
+  [weekdays[4]]: {
     open: 11,
     close: 23,
   },
-  sat: {
+  [weekdays[5]]: {
     open: 0, // Open 24 hours
     close: 24,
   },
@@ -44,30 +46,27 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-  openingHours: openingHours,
 
-  order: function (starterIndex, mainIndex) {
+  // ES6 enhanced object literals
+  openingHours,
+
+  order(starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
-  orderDelivery: function ({
-    starterIndex = 1,
-    mainIndex = 0,
-    time = `20:00`,
-    address,
-  }) {
+  orderDelivery({ starterIndex = 1, mainIndex = 0, time = `20:00`, address }) {
     // console.log(
     //   `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`,
     // );
   },
 
-  orderPasta: function (ing1, ing2, ing3) {
+  orderPasta(ing1, ing2, ing3) {
     console.log(
       `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`,
     );
   },
 
-  orderPizza: function (mainIngredient, ...otherIngredients) {
+  orderPizza(mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(otherIngredients);
   },
@@ -728,3 +727,54 @@ console.log(...menu.entries());
 */
 
 //// Enhanced Object Literals -----------------------
+/*
+/// Example 1) Property Shorthand
+// Original
+const openingHours = {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+};
+
+const restaurant = {
+  openingHours: openingHours,
+};
+// ES6
+const restaurant = {
+  openingHours,
+};
+
+
+
+/// Example 2) Method Shorthand
+// Original
+const restaurant = {
+  order: function (starterIndex, mainIndex) {
+    return [];
+  },
+};
+// ES6
+const restaurant = {
+  order(starterIndex, mainIndex) {
+    return [];
+  },
+};
+
+/// Example 3) Computed Property Names
+// Original
+const openingHours = {
+  thu: {},
+  fri: {},
+  sat: {},
+};
+// ES6
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+const openingHours = {
+  [weekdays[3]]: {},
+  [weekdays[4]]: {},
+  [weekdays[5]]: {},
+};
+*/
+
+//// Optional Chaining -----------------------
