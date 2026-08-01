@@ -6012,10 +6012,13 @@ let pageSum = 0;
 for (let book of books) {
   pageSum += book.pages;
 }
+// books 배열 안에는 수많은 책 객체(object)들이 들어 있음. for...of가 작동하면서 첫번째 책부터 마지막 책까지 순서대로 book이라는 변수에 넣어줌. 이럴 때 그저 book.pages를 꺼내서 pageSum에 더해주면 됨.
+
 
 /// 8.2 - Below is the allAuthors variable which stores an empty array. Use the for-of loop to fill allAuthors with the authors of each book from the books array.
 // Remember that each book object has the author property, which can be a string (if there is only a single author) or an array (if there are multiple authors). You may need to use the typeof operator. You can also use multiple loops if needed. The allAuthors array should have just one level (no nested arrays).
 const allAuthors = [];
+// 모든 책의 저자들을 allAuthorsㅏ라는 하나의 배열에 다 밀어 넣기. (단 저자가 1명인 경우와 여러 명인 경우를 나눠서 처리해야 함)
 
 /// My Answer
 for (const book of books) {
@@ -6028,11 +6031,51 @@ for (const book of books) {
   }
 }
 
+/// 해설
+const allAuthors = [];
+
+for (const book of books) {
+  // 1. 저자가 1명인 경우 (글자 데이터 타입이면)
+  if (typeof book.author === `string`) {
+    allAuthors.push(book.author); // 그냥 배열에 밀어 넣는다.
+  
+  // 2. 저자가 여러 명인 경우 (배열 데이터 타입이면)
+  } else {
+    for (const author of book.author) {
+      allAuthors.push(author); // 그 배열 안에서 저자를 한 명씩 다시 꺼내서 밀어 넣는다.
+    }
+  }
+}
+// 책의 저자가 문자열 하나일 수도 있고(저자가 1명인 상황), 배열일 가능성이 있음(저자가 2명 이상)
+// 이럴 때 typeof를 써서 글자(string)인지를 확인하고, 글자면 그냥 push로 넣음.
+// 만약 글자가 아니라면(즉 여러명의 배열) 그 안에서 다시 한번 for...of를 써서 한명씩 꺼내 담아준 것
+
+
 /// 8.3 - Use the for-of loop together with Array's entries() method to log each author from allAuthors to the console together with its index. Make the index start from 1, instead of 0.
+// allAuthors에 모인 저자들의 이름을 출력하기.
 
 /// My Answer
 for (const [index, author] of allAuthors.entries()) {
   console.log(`${index + 1}, ${author}`);
+}
+
+/// 해설
+// for...of의 유일한 단점은 "몇번째 데이터인지(index)"를 알수 없음. 이때 배열 뒤에 ".entries()"를 붙이면 index와 value를 동시에 뽑아낼 수 있음. (index는 0부터 시작하므로 +1을 해줌)
+// 구조 분해 할당(Destructuring)을 이용해 [index, author]로 번호와 이름을 각각 받음
+
+/// 부가설명 ------
+/// for...of 이란?
+// 기존에는 배열에서 값을 꺼내려면 배열[i, 즉 index]처럼 인덱스(번호)를 써서 귀찮게 접근해야 했었음. 하지만 for...of 문법을 쓰면 배열 안의 내용물을 순서대로 하나씩 뽑아서 변수에 담아줌.
+// 예시)
+const fruits = [`사과`, `바나나`, `포도`];
+
+// 기존 방식
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+// for...of 방식
+for (const fruit of fruits) {
+  console.log(fruit);
 }
 */
 //// Enhanced Object Literals -----------------------

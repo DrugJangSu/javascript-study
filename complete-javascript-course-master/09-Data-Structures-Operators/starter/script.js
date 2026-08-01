@@ -708,6 +708,7 @@ team1 > team2 && console.log(`Team 2 is more likely to win`);
 
 */
 //// Looping Arrays : The for-of Loop -----------------------
+/*
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
 for (const item of menu) console.log(item);
@@ -723,5 +724,6 @@ for (const [i, el] of menu.entries()) {
 }
 
 console.log(...menu.entries());
+*/
 
 //// Enhanced Object Literals -----------------------
