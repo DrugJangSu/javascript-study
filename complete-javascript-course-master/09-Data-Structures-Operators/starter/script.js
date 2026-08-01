@@ -711,3 +711,17 @@ team1 > team2 && console.log(`Team 2 is more likely to win`);
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
 for (const item of menu) console.log(item);
+
+// The old way
+for (const item of menu.entries()) {
+  console.log(`${item[0] + 1}: ${item[1]}`);
+}
+
+// The new way
+for (const [i, el] of menu.entries()) {
+  console.log(`$(i + 1): ${el}`);
+}
+
+console.log(...menu.entries());
+
+//// Enhanced Object Literals -----------------------
