@@ -6081,7 +6081,7 @@ for (const fruit of fruits) {
 
 //// Enhanced Object Literals -----------------------
 /*
-/// Example 1) Property Shorthand
+/// Example 1) Property Shorthand : 프로퍼티 축약
 // Original
 const openingHours = {
   thu: {
@@ -6097,10 +6097,10 @@ const restaurant = {
 const restaurant = {
   openingHours,
 };
+// 객체의 키(key) 이름과 그 안에 넣으려는 변수 이름이 완전히 똑같을 떄 사용함.
 
 
-
-/// Example 2) Method Shorthand
+/// Example 2) Method Shorthand : 메서드 축약
 // Original
 const restaurant = {
   order: function (starterIndex, mainIndex) {
@@ -6113,8 +6113,11 @@ const restaurant = {
     return [];
   },
 };
+// 갹채 언애소 험수(메서드)를 만들 떄, 귀찮은 :function이라는 구문을 생략할 수 있음. (단, 화살표 함수는 안됨)
+// 코드가 훨씬 짧아지고 진짜 "함수"처럼 보여 가독성이 좋아짐. (메서드 축약은 화살표 함수로는 안됨. 왜냐하면 화살표 함수는 this를 바인딩하지 않기 때문)
 
-/// Example 3) Computed Property Names
+
+/// Example 3) Computed Property Names : 계산된 프로퍼티 이름
 // Original
 const openingHours = {
   thu: {},
@@ -6128,4 +6131,6 @@ const openingHours = {
   [weekdays[4]]: {},
   [weekdays[5]]: {},
 };
+
+// 객체의 키(key) 이름을 하드코딩(직접 입력)하지 않고 대괄호 [] 안에서 연산을 통해 동적으로 만들어내는 기능임.
 */
