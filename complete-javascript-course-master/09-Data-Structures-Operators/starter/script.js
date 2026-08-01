@@ -719,7 +719,7 @@ for (const item of menu.entries()) {
 
 // The new way
 for (const [i, el] of menu.entries()) {
-  console.log(`$(i + 1): ${el}`);
+  console.log(`${i + 1}: ${el}`);
 }
 
 console.log(...menu.entries());
