@@ -6078,4 +6078,54 @@ for (const fruit of fruits) {
   console.log(fruit);
 }
 */
+
 //// Enhanced Object Literals -----------------------
+/*
+/// Example 1) Property Shorthand
+// Original
+const openingHours = {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+};
+
+const restaurant = {
+  openingHours: openingHours,
+};
+// ES6
+const restaurant = {
+  openingHours,
+};
+
+
+
+/// Example 2) Method Shorthand
+// Original
+const restaurant = {
+  order: function (starterIndex, mainIndex) {
+    return [];
+  },
+};
+// ES6
+const restaurant = {
+  order(starterIndex, mainIndex) {
+    return [];
+  },
+};
+
+/// Example 3) Computed Property Names
+// Original
+const openingHours = {
+  thu: {},
+  fri: {},
+  sat: {},
+};
+// ES6
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+const openingHours = {
+  [weekdays[3]]: {},
+  [weekdays[4]]: {},
+  [weekdays[5]]: {},
+};
+*/
