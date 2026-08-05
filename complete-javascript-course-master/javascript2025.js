@@ -6185,12 +6185,19 @@ for (const day of days) {
 }
 
 <메서드(함수)가 존재하는지 확인 및 실행 (?.())>
-// order 메서드가 있으면 실행하고, 없으면 뒤의 문구 출력
 console.log(restaurant.order?.(0, 1) ?? `Method does not exist`);
+// order 메서드가 있으면 실행하고, 없으면 뒤의 문구 출력
 
-// orderRisotto라는 메서드는 없으므로 에러 없이 오른쪽 문구 출력
 console.log(restaurant.orderRisotto?.(0, 1) ?? `Method does not exist`);
-해설 : 함수 뒤에 ?.()를 붙이면 "이 이름의 함수가 진짜 존재하는 경우에만 실행"하라는 뜻. 없는 함수를 실행하려 할 때 발생하는 "is not a function" 에러를 막아줌.
+// orderRisotto라는 메서드는 없으므로 에러 없이 오른쪽 문구 출력
 
+- 함수 뒤에 ?.()를 붙이면 "이 이름의 함수가 진짜 존재하는 경우에만 실행"하라는 뜻. 없는 함수를 실행하려 할 때 발생하는 "is not a function" 에러를 막아줌.
+
+<배열 요소가 비어있는지 확읺 (?.[index])>
+const users = [{ name: `Jonas`, email: `jonas@example.com` }];
+console.log(users[0]?.name ?? `User array empty`);
+// 0번째 유저가 존재하면 name을 꺼내고, 없으면 'User array empty' 출력
+
+- 기존에는 if (users.length >0)으로 길이를 체크해야 했지만, users[0]?.name 하나로 깔끔하게 처리 가능함.
 
 */
