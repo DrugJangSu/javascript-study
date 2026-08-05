@@ -778,6 +778,7 @@ const openingHours = {
 */
 
 //// Optional Chaining -----------------------
+/*
 // console.log(restaurant.openingHours.mon.open);
 // this will get an error because the openingHours object does not have a property called 'mon', but we don't know that yet. So we can use optional chaining to check if the property exists before trying to access it.
 
@@ -788,7 +789,7 @@ if (restaurant.openingHours && restaurant.openingHours.mon)
   console.log(restaurant.openingHours.mon.open);
 // We can check both, but if there are more than two levels of nesting, it can get messy. So we can use optional chaining to check if the property exists before trying to access it.
 
-// WITH optional chaining ---
+/// WITH optional chaining ---
 console.log(restaurant.openingHours.mon?.open);
 
 // Example
@@ -797,3 +798,17 @@ for (const day of days) {
   const open = restaurant.openingHours[day]?.open ?? `closed`;
   console.log(`On ${day}, we open at ${open}`);
 }
+
+/// Methods
+// checking if method exists before calling it
+console.log(restaurant.order?.(0, 1) ?? `Method does not exist`);
+console.log(restaurant.orderRisotto?.(0, 1) ?? `Method does not exist`);
+
+/// Arrays
+const users = [{ name: `Jonas`, email: `jonas@example.com` }];
+console.log(users[0]?.name ?? `User array empty`);
+
+if (users.length > 0) console.log(users[0].name);
+else console.log(`User array empty`);
+// the upper version looks much cleaner
+*/
