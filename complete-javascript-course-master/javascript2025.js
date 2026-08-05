@@ -6169,4 +6169,28 @@ console.log(users[0]?.name ?? `User array empty`);
 if (users.length > 0) console.log(users[0].name);
 else console.log(`User array empty`);
 // the upper version looks much cleaner
+/// 추가적인 내용 정리 --------
+// 자바스크립트 개발을 하면서 가장 흔하게 만나는 빨간색 런타임 에러(TypeError)를 막아주는 치트키.
+// Optional Chaining(옵셔널 체이닝) : 값의 속성을 읽으려고 하면 프로그램이 그 자리에서 멈추며 "대형 에러(Type Error: Cannot read properties of undefined)"가 발생함.
+기존 방식 : 에러를 막으려면 if (a && a.b && a.b.c) {...}처럼 조건문을 계속 쓰며 복잡하게 검사해야 함.
+옵셔널 체이닝 : ?. 연산자를 쓰면 "혹시 앞의 값이 없으면 에러 없이 그냥 undefined 라고 쓰고 넘어가라"라는 의미가 됨. (즉, 에러를 막아줌)
+
+<속성 접근(?.) + 기본값 채우기 (??)>
+const days = [`mon`, `tue`, `wed`, `thu`, `fri`, `sat`, `sun`];
+for (const day of days) {
+  const open = restaurant.openingHours[day]?.open ?? `closed`;
+  // restaurant.openingHours[day]가 없으면 바로 undefined를 내뱉음 (에러 X)
+  // 그 후 ?? 연산자가 작동해서 undefined면 'closed'를 대신 넣음
+  console.log(`On ${day}, we open at ${open}`);
+}
+
+<메서드(함수)가 존재하는지 확인 및 실행 (?.())>
+// order 메서드가 있으면 실행하고, 없으면 뒤의 문구 출력
+console.log(restaurant.order?.(0, 1) ?? `Method does not exist`);
+
+// orderRisotto라는 메서드는 없으므로 에러 없이 오른쪽 문구 출력
+console.log(restaurant.orderRisotto?.(0, 1) ?? `Method does not exist`);
+해설 : 함수 뒤에 ?.()를 붙이면 "이 이름의 함수가 진짜 존재하는 경우에만 실행"하라는 뜻. 없는 함수를 실행하려 할 때 발생하는 "is not a function" 에러를 막아줌.
+
+
 */
