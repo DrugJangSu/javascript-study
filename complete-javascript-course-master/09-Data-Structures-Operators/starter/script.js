@@ -812,3 +812,5 @@ if (users.length > 0) console.log(users[0].name);
 else console.log(`User array empty`);
 // the upper version looks much cleaner
 */
+//// Looping Objects : Object Keys, Values, and Entries -----------------------
+

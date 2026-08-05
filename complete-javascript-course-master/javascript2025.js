@@ -6199,5 +6199,14 @@ console.log(users[0]?.name ?? `User array empty`);
 // 0번째 유저가 존재하면 name을 꺼내고, 없으면 'User array empty' 출력
 
 - 기존에는 if (users.length >0)으로 길이를 체크해야 했지만, users[0]?.name 하나로 깔끔하게 처리 가능함.
+/// ASSIGNMENT[Looping Arrays : The for-of Loop] --------------------
+// 10. 1 - Write a function called getFirstKeyword that takes the book object as an argument. This function should return the first keyword from the book's keywords property (array) or undefined (if the keywords property doesn't exist). It shouldn't throw an error. Use optional chaining for that.
+// code : getFirstKeyword(books[0]);
+// Expected Output : 'computer science'
+// My Answer
+function getFirstKeyword(book) {
+  return book.keywords?.[0];
+}
 
 */
+//// Looping Objects : Object Keys, Values, and Entries -----------------------
