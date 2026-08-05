@@ -778,3 +778,15 @@ const openingHours = {
 */
 
 //// Optional Chaining -----------------------
+// console.log(restaurant.openingHours.mon.open);
+// this will get an error because the openingHours object does not have a property called 'mon', but we don't know that yet. So we can use optional chaining to check if the property exists before trying to access it.
+
+if (restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);
+// this will not get an error because the optional chaining operator checks if the property exists before trying to access it.
+
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+// We can check both, but if there are more than two levels of nesting, it can get messy. So we can use optional chaining to check if the property exists before trying to access it.
+
+// WITH optional chaining ---
+console.log(restaurant.openingHours.mon?.open);
