@@ -6230,8 +6230,95 @@ const {name, openingHours } = restaurant;
 - 이미 선언된 변수에 재할당할 때는 괄호 필요 : ({a, b} = obj);
 
 2. Spread Operator : 전개 연산자 (펼치기)
+-> 배열/객체/문자열 안의 요소를 하나씩 펼쳐서 사용하는 연산자
+
+const newArr = [1, 2, ...arr]; // 배열 합치기/복사
+const menu = [...starter, ...main]; // 배열 합치기
+restaurant.orderPasta(...ingredients); // 함수 인자로 배열 펼치기
+const newObj = {...restaurant, founder: `Giuseppe`}; // 객체 복사 + 추가
+- 배열 복사 (얕은 복사)
+- 문자열도 펼칠 수 있음 (...str)
+- 템플릿 리터럴 안에서는 직접 사용 불가
+
+3. Rest Pattern (...) - 나머지 모으기
+Spread와 같은 ...기호를 쓰지만 왼쪽에 쓰면 Rest가 됨.
+즉 남은 요소들을 배열로 모아줌.
+const [a, b, ...others] = [1, 2, 3, 4, 5]; // others = [3, 4, 5]
+const {sat, ...weekdays} = openingHours; // 객체에서도 가능
+function add(...numbers) {...} // 함수 매개변수에서 나머지 인자 모으기
+
+- 구분 방법
+= 오른쪽 -> Spread (펼치기)
+= 왼쪽 or 함수 매개변수 -> Rest (모으기)
+
+4. Short Circuiting (|| , &&)
+논리 연산자가 값을 반환하고, 필요 없으면 뒤쪽을 실행하지 않는 특성.
+- || (OR) : 첫번째로 truthly인 값을 반환
+  -> 기본값 설정에 자주 사용 (numGuests | 10)
+- && (AND) : 첫번째로 falsy인 값을 반환
+  -> 조건이 참일 때만 실행할 때 사용 (orderPizza && orderPizza(...))
+단점 : 0이나 빈 문자열('')도 falsy로 취급해서 문제가 생길 수 있음.
+
+5. Nullish Coalescing (??)
+||의 단점을 보완한 연산자.(null 또는 undefined)
+- null 또는 undefined 일 때만 오른쪽 값을 사용
+- 0, '', false는 그대로 유지
+예시)
+ const guests = restaurant.numGuests ?? 10; // 0이어도 0이 유지됨
+
+6. Logical Assignment Operators
+할당과 논리를 합친 짧은 문법
+?? = : null/undefined일 때만 할당
+&& = : 있을 때만 할당 (truthly)
+|| = : 없을 때만 할당 (falsy)
+예시)
+ rest1.numGuests ?? = 10;
+ rest1.owner &&= '<ANONYMOUS>';
+ // owner가 truthy일 때만 '<ANONYMOUS>'로 교체
+ // owner가 falsy(null, undefined 등)면 그대로 유지
+
+7. for-of 루프
+배열을 인덱스 없이 깔끔하게 순회하는 방법
+예시)
+ for (const item of menu) console.log(item);
+
+- 참고로 for-of은 iterable만 가능함. (Array, String, Map, Set)
+
+ // 인덱스가 필요할 때
+ for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+  }
+
+8. Enhanced Object Literals (향상된 객체 리터럴)
+객체를 만들 때 더 간결하게 쓰는 문법 3가지:
+ 1) 프로퍼티 축약 : 변수 이름과 키가 같으면 openingHours만 써도 됨
+ 2) 메서드 축약 : order() {} 처럼 function 키워드 생략
+ 3) 계산된 프로퍼티 이름 : [weekdays[3]] 처럼 동적으로 키 이름 만들기
+
+9. Optional Chaining (?.)
+중간에 값이 없으면 에러 내지 말고 undefined를 반환.
+예시)
+ restaurant.openingHours.mon?.open
+ restaurant.order?.(0, 1)
+ users[0]?.name
+보통 Nullish Coalescing(??)와 같이 사용함
+ const open = restaurant.openingHours[day]?.open ?? `closed`;
+
+추가로 정리하자면
+?. -> undefined를 반환하고 끝
+??. -> undefined면 기본값 사용
 
 
+TLDR:
+Destructuring -> 값 꺼내기 -> 배열/객체에서 변수로 분리할 때
+Spread (...) -> 펼치기 -> 복사, 합치기, 함수 인자 전달
+Rest (...) -> 모으기 -> 나머지 요소 받기
+` -> 
+|| / && -> 단축 평가 -> 기본값 / 조건부 실행
+?? -> nullish 기본값 -> 0이나 빈 문자열을 살리고 싶을 때
+?. -> 안전한 접근 -> 중첩된 속성이 없을 수도 있을 때
+for-of -> 쉬운 순회 -> 배열을 돌 때
+Enhanced Object -> 객체 간결화 -> 객체를 선언할 때
 
 
 */
