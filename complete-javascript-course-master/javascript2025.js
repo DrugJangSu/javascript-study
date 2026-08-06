@@ -6210,4 +6210,29 @@ function getFirstKeyword(book) {
 }
 
 */
+/*
+//// 지금까지 잠깐 정리해놓은 내용 -------------
+1. Destructuring : 구조 분해 할당
+-> 배열이나 객체의 값을 변수로 한번에 꺼내 쓰는 문법.
+// 배열 구조 분해
+예시)
+const [x, y, z] = [2, 3, 4];
+... x= 2, y=3, z=4
+- 건너뛰기 : const [first, , third] = [1, 2, 3]; // first=1, third=3
+- 중첩 배열도 가능
+- 기본값 설정 가능 : const [x=1, y=1, z=1] = [2, 3]; // x=2, y=3, z=1
+
+// 객체 구조 분해
+const {name, openingHours } = restaurant;
+- 이름 바꾸기 : const {name: restaurantName, openingHours: hours} = restaurant;
+- 기본값 설정 가능 : const {menu = [], starterMenu: starters = []} = restaurant;
+- 중첩 객체 분해도 가능
+- 이미 선언된 변수에 재할당할 때는 괄호 필요 : ({a, b} = obj);
+
+2. Spread Operator : 전개 연산자 (펼치기)
+
+
+
+
+*/
 //// Looping Objects : Object Keys, Values, and Entries -----------------------
