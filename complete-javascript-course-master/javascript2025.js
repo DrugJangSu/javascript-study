@@ -6376,5 +6376,38 @@ const entries2 = Object.entries(books[0].thirdParty.goodreads);
 
 console.log(entries);
 console.log(entries2);
+
+/// 챕터 정리
+// 객체(Object) 안을 배열처럼 반복하며 원하는 데이터를 뽑아내는 3가지 핵심 도구
+// - 자바스크립트에서 배열 []은 for ...of로 쉽게 반복문을 돌릴 수 있지만, 객체 {}는 바로 for...of를 돌릴 수 없음. 그래서 객체를 강제로 배열로 변환해 주는 도구가 필요함.
+// 3가지 핵심 도구 요약
+예시) const score = (rating: 4.5, count : 100);
+1) Object.keys (객체): 키(이름표)만 배열로 뽑아냄
+  결과 : ['rating','count']
+2) Object.values (객체): 값(내용물)만 배열로 뽑아냄
+  결과: [4.5, 100]
+3) Object.entries(객체): [키,값]을 하나로 묶어서 배열 안의 배열로 뽑아냄
+  결과: [['rating', 4.5],['count', 100]]
+
+(오프더레코드 -> Python으로 생각하면)
+dict.keys()    # Object.keys()
+dict.values()  # Object.values()
+dict.items()   # Object.entries()
+
+
+예시)
+// keys 순회
+for (const day of Object.keys(openingHours)) {
+  console.log(day); // 'thu', 'fri', 'sat'
+}
+
+// entries 순회 + 구조 분해
+for (const [key, { open, close }] of Object.entries(openingHours)) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
+// On thu we open at 12 and close at 22
+// On fri we open at 11 and close at 23
+
 */
+
 //// CHALLENGE #2 -----------------------------------------------
