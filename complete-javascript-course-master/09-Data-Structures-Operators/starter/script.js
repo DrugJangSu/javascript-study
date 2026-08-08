@@ -813,3 +813,19 @@ else console.log(`User array empty`);
 // the upper version looks much cleaner
 */
 //// Looping Objects : Object Keys, Values, and Entries -----------------------
+
+/// property NAMES
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} days: `;
+
+for (const day of properties) {
+  openStr += `${day},`;
+}
+
+console.log(openStr);
+
+/// Property VALUES
+const values = Object.values(openingHours);
+console.log(values);
