@@ -813,7 +813,7 @@ else console.log(`User array empty`);
 // the upper version looks much cleaner
 */
 //// Looping Objects : Object Keys, Values, and Entries -----------------------
-
+/*
 /// property NAMES
 const properties = Object.keys(openingHours);
 console.log(properties);
@@ -829,3 +829,15 @@ console.log(openStr);
 /// Property VALUES
 const values = Object.values(openingHours);
 console.log(values);
+
+/// Entire object
+const entries = Object.entries(openingHours);
+console.log(entries);
+
+/// [key, value]
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
+*/
+
+//// CHALLENGE #2 -----------------------------------------------

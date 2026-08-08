@@ -6323,3 +6323,46 @@ Enhanced Object -> 객체 간결화 -> 객체를 선언할 때
 
 */
 //// Looping Objects : Object Keys, Values, and Entries -----------------------
+/*
+/// property NAMES
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} days: `;
+
+for (const day of properties) {
+  openStr += `${day},`;
+}
+
+console.log(openStr);
+
+/// Property VALUES
+const values = Object.values(openingHours);
+console.log(values);
+
+/// Entire object
+const entries = Object.entries(openingHours);
+console.log(entries);
+
+/// [key, value]
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
+
+/// ASSIGNMENT[Looping Objects : Object Keys, Values and Entries] --------------------
+
+// 11.1. Below is the entries variable that stores an empty array. Use the for-of loop together with the Object.keys() method to loop over the thirdParty.goodreads property (array) of the first book object from the books array. For each key, push a new array that contains that key to the entries array.
+In the end, the entries array should be filled with arrays containing keys:
+[['rating'], ['ratingsCount'], ['reviewsCount'], ['fiveStartRatingCount'], ['oneStartRatingCount']]
+const entries = [];
+// My Answer:
+
+
+
+
+// 11.2. The Object.values() method returns an array, which means you can call the Array's entries() method on it, for example, Object.entries(books[0].thirdParty.goodreads).entries(). The Array's entries() method returns [index, value] arrays for each element in the array. Use the for-of loop together with the Object.values() method and Array's entries() method to loop over thirdParty.goodreads property of the first book from the books array. Push each value to the appropriate inner array in the entries array (use index from entries()).
+// My Answer:
+
+
+*/
+//// CHALLENGE #2 -----------------------------------------------
