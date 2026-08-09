@@ -6437,10 +6437,12 @@ const chars = [...'hello'];   // ['h','e','l','l','o']
 
 함수 인자 전달
 fn(...args);
-주의: 객체 복사는 얕은 복사(shallow copy)이며, 내부 객체는 같은 참조를 공유합니다.
+주의: 객체 복사는 얕은 복사(shallow copy)이며, 내부 객체는 같은 참조를 공유함
+
 //// 3. Rest Pattern (...)
 배열에서 남은 요소 수집
 const [first, ...rest] = arr;   // rest → 나머지 요소 배열
+... rest는 배열 안에서 반드시 마지막에 와야 함.
 
 객체에서 남은 프로퍼티 수집
 const {a, ...others} = obj;    // others → 나머지 프로퍼티 객체
@@ -6452,8 +6454,10 @@ function sum(...nums){ return nums.reduce((s,n)=>s+n,0); }
 || (OR) – 첫 번째 truthy 값을 반환 → 기본값 설정
 const a = user || 'guest';
 
-&& (AND) – 첫 번째 falsy 값을 반환 → 조건부 실행
+&& (AND) – 첫번째 falsy 값 또는 마지막 truthly 값을 반환함.
 cond && doSomething();
+true && `Hello` // `Hello`
+false && `Hello` // false
 
 - 0, '', false 등도 falsy이므로, 값 0을 허용하려면 ?? 사용
 //// 5. Nullish Coalescing (??)
