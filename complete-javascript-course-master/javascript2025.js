@@ -6409,5 +6409,113 @@ for (const [key, { open, close }] of Object.entries(openingHours)) {
 // On fri we open at 11 and close at 23
 
 */
+/*
+///// 잠시 전체적으로 정리
+//// 1. Destructuring (구조분해 할당)
+배열 구조분해
+const [a, b] = arr;          // a → arr[0], b → arr[1]
+const [first, , third] = arr; // 건너뛰기
+const [x=1, y=2] = arr;      // 기본값
+
+객체 구조분해
+const {name, age} = person;           // name, age 변수 생성
+const {title: bookTitle} = book;      // 이름 재정의
+const {address:{city}} = person;       // 중첩 구조분해
+
+함수 매개변수에서 바로 사용
+function show({title, author}){ ... }
+
+//// 2. Spread Operator (...)
+배열 펼치기
+const newArr = [1, ...oldArr, 3];
+
+객체 펼치기 (merge)
+const merged = {...obj1, ...obj2};
+
+문자열 펼치기
+const chars = [...'hello'];   // ['h','e','l','l','o']
+
+함수 인자 전달
+fn(...args);
+주의: 객체 복사는 얕은 복사(shallow copy)이며, 내부 객체는 같은 참조를 공유합니다.
+//// 3. Rest Pattern (...)
+배열에서 남은 요소 수집
+const [first, ...rest] = arr;   // rest → 나머지 요소 배열
+
+객체에서 남은 프로퍼티 수집
+const {a, ...others} = obj;    // others → 나머지 프로퍼티 객체
+
+함수 매개변수
+function sum(...nums){ return nums.reduce((s,n)=>s+n,0); }
+
+//// 4. Short‑Circuiting (&&, ||)
+|| (OR) – 첫 번째 truthy 값을 반환 → 기본값 설정
+const a = user || 'guest';
+
+&& (AND) – 첫 번째 falsy 값을 반환 → 조건부 실행
+cond && doSomething();
+
+- 0, '', false 등도 falsy이므로, 값 0을 허용하려면 ?? 사용
+//// 5. Nullish Coalescing (??)
+null 또는 undefined일 때만 오른쪽 값을 사용
+const value = data?.prop ?? 'default';
+
+0, '', false는 그대로 유지
+const num = null ?? 5;   // 5
+const str = '' ?? 'x';   // ''
+
+//// 6. Logical Assignment Operators (??=, &&=, ||=)
+??= – null/undefined 시 할당
+obj.count ??= 0;
+
+&&= – truthy 일 때 할당
+user.isAdmin &&= true;
+
+||= – falsy 시 할당
+obj.timeout ||= 3000;
+
+//// 7. for-of Loop & Object Iteration
+배열·문자열·Map·Set 등 iterable 순회
+for (const v of arr) console.log(v);
+
+객체 순회 – Object.keys(), values(), entries() 사용
+for (const [k,v] of Object.entries(obj)) console.log(k, v);
+forEach vs for-of
+forEach는 콜백만 호출하고 중단 불가
+for-of는 break/continue 가능
+
+//// 8. Enhanced Object Literals
+Property Shorthand – const x = 10; const obj = {x};
+Method Shorthand – const obj = { greet(){ console.log('hi'); } };
+Computed Property Names – const key = 'age'; const obj = {[key]: 30};
+
+//// 9. Optional Chaining (?.)
+안전한 프로퍼티 접근
+const rating = book?.thirdParty?.goodreads?.rating ?? 'no data';
+
+배열 인덱스 접근 – arr?.[idx]
+메서드 호출 – obj?.method()
+
+//// 10. 실제 활용 - Practical Challenge (Football Betting App)
+아래 예시처럼 여러 개념을 한 번에 활용
+const [players1, players2] = game.players;          // 구조분해
+const [gk, ...fieldPlayers] = players1;             // rest pattern
+const finalTeam = [...players1, 'Thiago', 'Coutinho']; // spread
+const {team1, x:draw, team2} = game.odds;           // 구조분해 + 별칭
+function printGoals(...players){                     // rest in function
+  console.log(players.length, 'goals were scored');
+}
+printGoals(...game.scored);                          // spread as args
+team1 < team2 && console.log('Team 1 is more likely to win');
+
+// Spread vs Rest
+... 오른쪽 → 펼치기 (expand)
+... 왼쪽/함수 매개변수 → 모으기 (collect)
+Object.assign()
+ES5 이전에 객체 병합 시 사용; ...과 같은 얕은 복사 기능.
+
+배열에서 중복 제거
+const unique = [...new Set(arr)];
+*/
 
 //// CHALLENGE #2 -----------------------------------------------
