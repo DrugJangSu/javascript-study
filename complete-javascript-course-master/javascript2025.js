@@ -6419,7 +6419,7 @@ const [x=1, y=2] = arr;      // 기본값
 
 객체 구조분해
 const {name, age} = person;           // name, age 변수 생성
-const {title: bookTitle} = book;      // 이름 재정의
+const {title: bookTitle} = book;      // title라는 객체 프로퍼티를 bookTitle라는 변수명으로 꺼냄
 const {address:{city}} = person;       // 중첩 구조분해
 
 함수 매개변수에서 바로 사용
