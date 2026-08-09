@@ -6460,6 +6460,7 @@ true && `Hello` // `Hello`
 false && `Hello` // false
 
 - 0, '', false 등도 falsy이므로, 값 0을 허용하려면 ?? 사용
+
 //// 5. Nullish Coalescing (??)
 null 또는 undefined일 때만 오른쪽 값을 사용
 const value = data?.prop ?? 'default';
@@ -6498,7 +6499,10 @@ Computed Property Names – const key = 'age'; const obj = {[key]: 30};
 const rating = book?.thirdParty?.goodreads?.rating ?? 'no data';
 
 배열 인덱스 접근 – arr?.[idx]
+
 메서드 호출 – obj?.method()
+
+- 참고로 ?. 는 null과 undefined를 만났을 때만 멈춤.
 
 //// 10. 실제 활용 - Practical Challenge (Football Betting App)
 아래 예시처럼 여러 개념을 한 번에 활용
