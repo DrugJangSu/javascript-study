@@ -6521,9 +6521,18 @@ team1 < team2 && console.log('Team 1 is more likely to win');
 ... 왼쪽/함수 매개변수 → 모으기 (collect)
 Object.assign()
 ES5 이전에 객체 병합 시 사용; ...과 같은 얕은 복사 기능.
+const copy = Object.assign({}, restaurant);
+const copy = { ...restaurant };
+위 내용 둘다 얕은 복사(shallow copy).
+
 
 배열에서 중복 제거
+const arr = [1, 2, 2, 3, 3, 3];
 const unique = [...new Set(arr)];
+console.log(unique);
+// [1, 2, 3]
+Set는 중복을 허용하지 않는 자료구조이고, 다시 spread로 배열을 펼치는 것
+
 */
 
 //// CHALLENGE #2 -----------------------------------------------
